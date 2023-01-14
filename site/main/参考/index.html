@@ -1,0 +1,2859 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../%E8%AE%BE%E7%BD%AE/" rel="prev"/>
+<link href="../%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" rel="next"/>
+<link href="https://pic.peo.pw/a/2023/01/12/63bfb934b1b06.png" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.3" name="generator"/>
+<title>参考 - mkdocs-wiki</title>
+<link href="../../assets/stylesheets/main.6b71719e.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25zM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25zm13.274 9.537v-.001l-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074zM4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5zM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75zM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.499.75a.75.75 0 0 1 1.5 0v.996C5.9 2.903 6.793 3.65 7.662 4.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873 10.794-.045 12.622.26 14.408.558 16 1.94 16 4.25c0 1.278-.954 2.575-2.44 2.734l.146.508.065.22c.203.701.412 1.455.476 2.226.142 1.707-.4 3.03-1.487 3.898C11.714 14.671 10.27 15 8.75 15h-6a.75.75 0 0 1 0-1.5h1.376a4.484 4.484 0 0 1-.563-1.191 3.835 3.835 0 0 1-.05-2.063 4.647 4.647 0 0 1-2.025-.293.75.75 0 0 1 .525-1.406c1.357.507 2.376-.006 2.698-.318l.009-.01a.747.747 0 0 1 1.06 0 .748.748 0 0 1-.012 1.074c-.912.92-.992 1.835-.768 2.586.221.74.745 1.337 1.196 1.621H8.75c1.343 0 2.398-.296 3.074-.836.635-.507 1.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.425 2.425 0 0 1-.507-.441 3.075 3.075 0 0 1-.633-1.248.75.75 0 0 1 1.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738 0 1.25-.615 1.25-1.25 0-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706 1.345-.46.92-.27 1.774.019 3.062l.042.19a.884.884 0 0 1 .01.05c.348.443.666.949.94 1.553a.75.75 0 1 1-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7 5.527c-.814-.68-1.75-1.462-2.692-2.619a3.737 3.737 0 0 0-1.023.88c-.406.495-.663 1.036-.722 1.508.116.122.306.21.591.239.388.038.797-.06 1.032-.19a.75.75 0 0 1 .728 1.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75 5.677V5.5c0-.984.48-1.94 1.077-2.664.46-.559 1.05-1.055 1.673-1.353V.75z"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0z"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.756 2.756 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6.24 6.24 0 0 0-.26.16.952.952 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661.103-.067.207-.132.313-.195l.007-.004c.1-.061.182-.11.258-.161a.969.969 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.612.612 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1.01 1.01 0 0 0-.34.398zM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0zM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.344 2.343h-.001a8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746zm1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275zM6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L6.94 8 4.97 6.03a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018z"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.249 1.249 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004L9.503.429zm1.047 1.074L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006a.036.036 0 0 0-.004-.009l-.006-.006-.008-.001c-.003 0-.006.002-.009.004z"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.72.22a.75.75 0 0 1 1.06 0l1 .999a3.488 3.488 0 0 1 2.441 0l.999-1a.748.748 0 0 1 1.265.332.75.75 0 0 1-.205.729l-.775.776c.616.63.995 1.493.995 2.444v.327c0 .1-.009.197-.025.292.408.14.764.392 1.029.722l1.968-.787a.75.75 0 0 1 .556 1.392L13 7.258V9h2.25a.75.75 0 0 1 0 1.5H13v.5c0 .409-.049.806-.141 1.186l2.17.868a.75.75 0 0 1-.557 1.392l-2.184-.873A4.997 4.997 0 0 1 8 16a4.997 4.997 0 0 1-4.288-2.427l-2.183.873a.75.75 0 0 1-.558-1.392l2.17-.868A5.036 5.036 0 0 1 3 11v-.5H.75a.75.75 0 0 1 0-1.5H3V7.258L.971 6.446a.75.75 0 0 1 .558-1.392l1.967.787c.265-.33.62-.583 1.03-.722a1.677 1.677 0 0 1-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72 1.28a.75.75 0 0 1 0-1.06zm.53 6.28a.75.75 0 0 0-.75.75V11a3.5 3.5 0 1 0 7 0V7.25a.75.75 0 0 0-.75-.75zM6.173 5h3.654A.172.172 0 0 0 10 4.827V4.5a2 2 0 1 0-4 0v.327c0 .096.077.173.173.173z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45zM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6z"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 2.5h10.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5zm4 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5zM2.5 7.75v6a.75.75 0 0 1-1.5 0v-6a.75.75 0 0 1 1.5 0z"/></svg>');}</style>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../css/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          跳转至
+        </a>
+</div>
+<div data-md-component="announce">
+<aside class="md-banner">
+<div class="md-banner__inner md-grid md-typeset">
+<!-- Add announcement here, including arbitrary HTML -->
+<h1>公告(常见bug -&gt; 导致服务崩掉)</h1>
+<p>1. mkdocs.yml语法错误</p>
+<p>2. 内容选项卡的名字为空</p>
+</div>
+</aside>
+</div>
+<div data-md-component="outdated" hidden="">
+</div>
+<header class="md-header md-header--lifted" data-md-component="header">
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label="mkdocs-wiki" class="md-header__button md-logo" data-md-component="logo" href="/" title="mkdocs-wiki">
+<img alt="logo" src="https://pic.peo.pw/a/2023/01/12/63bfb934b1b06.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            mkdocs-wiki
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              参考
+            
+          </span>
+</div>
+</div>
+</div>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="选择当前语言" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="/en/" hreflang="en">
+                    English
+                  </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="/de/" hreflang="de">
+                    Deutsch
+                  </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<a aria-label="分享" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="分享">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"></path></svg>
+</a>
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/liangxiongsl/mkdocs-wiki" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    algo
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../%E5%BC%80%E5%A7%8B/">
+      开始
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../%E8%AE%BE%E7%BD%AE/">
+      设置
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="./">
+      参考
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">
+      配置文件
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../includes/abbr/">
+      缩写
+    </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="mkdocs-wiki" class="md-nav__button md-logo" data-md-component="logo" href="/" title="mkdocs-wiki">
+<img alt="logo" src="https://pic.peo.pw/a/2023/01/12/63bfb934b1b06.png"/>
+</a>
+    mkdocs-wiki
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/liangxiongsl/mkdocs-wiki" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    algo
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E5%BC%80%E5%A7%8B/">
+        开始
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E8%AE%BE%E7%BD%AE/">
+        设置
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          参考
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        参考
+      </a>
+<nav aria-label="完全是一个目录哦" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      完全是一个目录哦
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#一告诫">
+    一,告诫
+  </a>
+<nav aria-label="一,告诫" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置">
+    1.配置
+  </a>
+<nav aria-label="1.配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#告诫图标">
+    告诫图标
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#更改标题">
+    更改标题
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#无标题">
+    无标题
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#可折叠块">
+    可折叠块
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#内联块">
+    内联块
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3定制">
+    3.定制
+  </a>
+<nav aria-label="3.定制" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#旧版本告诫css">
+    旧版本告诫css
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#自定义告诫css">
+    自定义告诫css
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#二注释">
+    二.注释
+  </a>
+<nav aria-label="二.注释" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_1">
+    1.配置
+  </a>
+<nav aria-label="1.配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法付费">
+    2.用法(付费)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#三按钮">
+    三.按钮
+  </a>
+<nav aria-label="三.按钮" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_2">
+    1.配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_1">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#添加按钮">
+    添加按钮
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#添加主按钮">
+    添加主按钮
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#添加图标略">
+    添加图标(略)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#四代码块">
+    四.代码块
+  </a>
+<nav aria-label="四.代码块" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_3">
+    1.配置
+  </a>
+<nav aria-label="1.配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#代码复制按钮">
+    代码复制按钮
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#代码注释">
+    代码注释
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_2">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#添加标题">
+    添加标题
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#添加批注">
+    添加批注
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#添加行号">
+    添加行号
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#突出显示特定行">
+    突出显示特定行
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#突出显示内联代码块">
+    突出显示内联代码块
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#嵌入外部文件">
+    嵌入外部文件
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2定制">
+    2.定制
+  </a>
+<nav aria-label="2.定制" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#自定义语法主题略">
+    自定义语法主题(略)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#批注工具宽度">
+    批注工具宽度
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#带数字的注释">
+    带数字的注释
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5内容选项卡付费">
+    5.内容选项卡(付费)
+  </a>
+<nav aria-label="5.内容选项卡(付费)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_4">
+    1.配置
+  </a>
+<nav aria-label="1.配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#锚链接">
+    锚链接
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#链接的内容选项卡">
+    链接的内容选项卡
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_3">
+    2.用法
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6数据表">
+    6.数据表
+  </a>
+<nav aria-label="6.数据表" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_5">
+    1.配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_4">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#列对齐">
+    列对齐
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3定制_1">
+    3.定制
+  </a>
+<nav aria-label="3.定制" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#可排序表">
+    可排序表
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7图">
+    7.图
+  </a>
+<nav aria-label="7.图" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_6">
+    1.配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_5">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#流程图">
+    流程图
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#序列图">
+    序列图
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#状态图">
+    状态图
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#类图">
+    类图
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#其他图表类型">
+    其他图表类型
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8脚注">
+    8.脚注
+  </a>
+<nav aria-label="8.脚注" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_7">
+    1.配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_6">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#添加脚注引用">
+    添加脚注引用
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9文本格式">
+    9.(文本)格式
+  </a>
+<nav aria-label="9.(文本)格式" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_8">
+    1.配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#用法">
+    用法
+  </a>
+<nav aria-label="用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#突出显示所做的修改">
+    突出显示所做的修改
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#高亮文本">
+    高亮文本
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#上下标">
+    上下标
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#添加键盘键">
+    添加键盘键
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10网格">
+    10.网格
+  </a>
+<nav aria-label="10.网格" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_9">
+    1.配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法没用-略">
+    2.用法(没用, 略)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11图标表情符号">
+    11.图标，表情符号
+  </a>
+<nav aria-label="11.图标，表情符号" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_10">
+    1.配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_7">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#图标">
+    图标
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#表情符号">
+    表情符号
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#颜色-和-动画">
+    颜色 和 动画
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#在导航侧边栏中使用图标报错">
+    在导航、侧边栏中使用图标(报错)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3定制略">
+    3.定制(略)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12图像">
+    12.图像
+  </a>
+<nav aria-label="12.图像" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_11">
+    1.配置
+  </a>
+<nav aria-label="1.配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#插件glightbox">
+    插件——glightbox
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_8">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#图片对齐">
+    图片对齐
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#图片说明">
+    图片说明
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#图像延迟加载">
+    图像延迟加载
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#明暗模式">
+    明暗模式
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13列表">
+    13.列表
+  </a>
+<nav aria-label="13.列表" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_12">
+    1.配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_9">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#无序列表">
+    无序列表
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#有序列表">
+    有序列表
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#定义列表">
+    定义列表
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14mathjax">
+    14.MathJax
+  </a>
+<nav aria-label="14.MathJax" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_13">
+    1.配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_10">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#块语法">
+    块语法
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#内联语法">
+    内联语法
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#十五工具提示">
+    十五.工具提示
+  </a>
+<nav aria-label="十五.工具提示" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_14">
+    1.配置
+  </a>
+<nav aria-label="1.配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#改进的工具提示">
+    改进的工具提示
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_11">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#工具提示">
+    工具提示
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#缩写">
+    缩写
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#词汇表">
+    词汇表
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">
+        配置文件
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../includes/abbr/">
+        缩写
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="完全是一个目录哦" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      完全是一个目录哦
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#一告诫">
+    一,告诫
+  </a>
+<nav aria-label="一,告诫" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置">
+    1.配置
+  </a>
+<nav aria-label="1.配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#告诫图标">
+    告诫图标
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#更改标题">
+    更改标题
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#无标题">
+    无标题
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#可折叠块">
+    可折叠块
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#内联块">
+    内联块
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3定制">
+    3.定制
+  </a>
+<nav aria-label="3.定制" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#旧版本告诫css">
+    旧版本告诫css
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#自定义告诫css">
+    自定义告诫css
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#二注释">
+    二.注释
+  </a>
+<nav aria-label="二.注释" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_1">
+    1.配置
+  </a>
+<nav aria-label="1.配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法付费">
+    2.用法(付费)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#三按钮">
+    三.按钮
+  </a>
+<nav aria-label="三.按钮" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_2">
+    1.配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_1">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#添加按钮">
+    添加按钮
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#添加主按钮">
+    添加主按钮
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#添加图标略">
+    添加图标(略)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#四代码块">
+    四.代码块
+  </a>
+<nav aria-label="四.代码块" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_3">
+    1.配置
+  </a>
+<nav aria-label="1.配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#代码复制按钮">
+    代码复制按钮
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#代码注释">
+    代码注释
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_2">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#添加标题">
+    添加标题
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#添加批注">
+    添加批注
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#添加行号">
+    添加行号
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#突出显示特定行">
+    突出显示特定行
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#突出显示内联代码块">
+    突出显示内联代码块
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#嵌入外部文件">
+    嵌入外部文件
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2定制">
+    2.定制
+  </a>
+<nav aria-label="2.定制" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#自定义语法主题略">
+    自定义语法主题(略)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#批注工具宽度">
+    批注工具宽度
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#带数字的注释">
+    带数字的注释
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5内容选项卡付费">
+    5.内容选项卡(付费)
+  </a>
+<nav aria-label="5.内容选项卡(付费)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_4">
+    1.配置
+  </a>
+<nav aria-label="1.配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#锚链接">
+    锚链接
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#链接的内容选项卡">
+    链接的内容选项卡
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_3">
+    2.用法
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6数据表">
+    6.数据表
+  </a>
+<nav aria-label="6.数据表" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_5">
+    1.配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_4">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#列对齐">
+    列对齐
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3定制_1">
+    3.定制
+  </a>
+<nav aria-label="3.定制" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#可排序表">
+    可排序表
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7图">
+    7.图
+  </a>
+<nav aria-label="7.图" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_6">
+    1.配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_5">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#流程图">
+    流程图
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#序列图">
+    序列图
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#状态图">
+    状态图
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#类图">
+    类图
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#其他图表类型">
+    其他图表类型
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8脚注">
+    8.脚注
+  </a>
+<nav aria-label="8.脚注" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_7">
+    1.配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_6">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#添加脚注引用">
+    添加脚注引用
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9文本格式">
+    9.(文本)格式
+  </a>
+<nav aria-label="9.(文本)格式" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_8">
+    1.配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#用法">
+    用法
+  </a>
+<nav aria-label="用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#突出显示所做的修改">
+    突出显示所做的修改
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#高亮文本">
+    高亮文本
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#上下标">
+    上下标
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#添加键盘键">
+    添加键盘键
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10网格">
+    10.网格
+  </a>
+<nav aria-label="10.网格" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_9">
+    1.配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法没用-略">
+    2.用法(没用, 略)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11图标表情符号">
+    11.图标，表情符号
+  </a>
+<nav aria-label="11.图标，表情符号" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_10">
+    1.配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_7">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#图标">
+    图标
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#表情符号">
+    表情符号
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#颜色-和-动画">
+    颜色 和 动画
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#在导航侧边栏中使用图标报错">
+    在导航、侧边栏中使用图标(报错)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3定制略">
+    3.定制(略)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12图像">
+    12.图像
+  </a>
+<nav aria-label="12.图像" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_11">
+    1.配置
+  </a>
+<nav aria-label="1.配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#插件glightbox">
+    插件——glightbox
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_8">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#图片对齐">
+    图片对齐
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#图片说明">
+    图片说明
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#图像延迟加载">
+    图像延迟加载
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#明暗模式">
+    明暗模式
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13列表">
+    13.列表
+  </a>
+<nav aria-label="13.列表" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_12">
+    1.配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_9">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#无序列表">
+    无序列表
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#有序列表">
+    有序列表
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#定义列表">
+    定义列表
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14mathjax">
+    14.MathJax
+  </a>
+<nav aria-label="14.MathJax" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_13">
+    1.配置
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_10">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#块语法">
+    块语法
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#内联语法">
+    内联语法
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#十五工具提示">
+    十五.工具提示
+  </a>
+<nav aria-label="十五.工具提示" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1配置_14">
+    1.配置
+  </a>
+<nav aria-label="1.配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#改进的工具提示">
+    改进的工具提示
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2用法_11">
+    2.用法
+  </a>
+<nav aria-label="2.用法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#工具提示">
+    工具提示
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#缩写">
+    缩写
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#词汇表">
+    词汇表
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/liangxiongsl/mkdocs-wiki/edit/master/docs/main/参考.md" title="编辑此页">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
+</a>
+<a class="md-content__button md-icon" href="https://github.com/liangxiongsl/mkdocs-wiki/raw/master/docs/main/参考.md" title="View source of this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"></path></svg>
+</a>
+<h1>参考</h1>
+<h3 id="_1"><a class="headerlink" href="#_1" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<h1 id="一告诫">一,告诫<a class="headerlink" href="#一告诫" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置">1.配置<a class="headerlink" href="#1配置" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<p>告诫，允许使它们可折叠并在告诫中嵌套任意内容</p>
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+</code></pre></div>
+<h3 id="告诫图标">告诫图标<a class="headerlink" href="#告诫图标" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code>theme.icon.admonition
+    note: octicons/tag-16   # &lt;type&gt; : &lt;icon&gt;
+    abstract: octicons/checklist-16
+    info: octicons/info-16
+    tip: octicons/squirrel-16
+    success: octicons/check-16
+    question: octicons/question-16
+    warning: octicons/alert-16
+    failure: octicons/x-circle-16
+    danger: octicons/zap-16
+    bug: octicons/bug-16
+    example: octicons/beaker-16
+    quote: octicons/quote-16
+</code></pre></div>
+<p>或</p>
+<div class="highlight"><pre><span></span><code>theme.icon.admonition
+    note: fontawesome/solid/note-sticky
+    abstract: fontawesome/solid/book
+    info: fontawesome/solid/circle-info
+    tip: fontawesome/solid/bullhorn
+    success: fontawesome/solid/check
+    question: fontawesome/solid/circle-question
+    warning: fontawesome/solid/triangle-exclamation
+    failure: fontawesome/solid/bomb
+    danger: fontawesome/solid/skull
+    bug: fontawesome/solid/robot
+    example: fontawesome/solid/flask
+    quote: fontawesome/solid/quote-left
+</code></pre></div>
+<h2 id="2用法">2.用法<a class="headerlink" href="#2用法" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<p>块以 !!! 开头，后跟用作类型限定符的单个关键字。块的内容紧跟在下一行，缩进四个空格
+如：</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>XXXXX</p>
+</div>
+<h3 id="更改标题">更改标题<a class="headerlink" href="#更改标题" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="admonition note">
+<p class="admonition-title">标题</p>
+<p>XXXXX</p>
+</div>
+<h3 id="无标题">无标题<a class="headerlink" href="#无标题" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="admonition note">
+<p>XXXXX</p>
+</div>
+<p>// 不可折叠</p>
+<h3 id="可折叠块">可折叠块<a class="headerlink" href="#可折叠块" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<details class="note">
+<summary>Note</summary>
+<p>以 ??? 开头</p>
+</details>
+<h3 id="内联块">内联块<a class="headerlink" href="#内联块" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="admonition note inline">
+<p class="admonition-title">左对齐</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>类型关键字后面紧跟 inline
+</code></pre></div>
+</div>
+<div class="admonition note inline end">
+<p class="admonition-title">右对齐</p>
+<p>类型关键字后面紧跟 inline end</p>
+</div>
+<p><br/><br/><br/></p>
+<h2 id="3定制">3.定制<a class="headerlink" href="#3定制" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="旧版本告诫css">旧版本告诫css<a class="headerlink" href="#旧版本告诫css" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code>.md-typeset .admonition, .md-typeset details {
+    border-width: 0;
+    border-left-width: 4px;
+}
+</code></pre></div>
+<h3 id="自定义告诫css">自定义告诫css<a class="headerlink" href="#自定义告诫css" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code>:root {
+  --md-admonition-icon--pied-piper: url('data:image/svg+xml;charset=utf-8,&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"&gt;&lt;path d="M244 246c-3.2-2-6.3-2.9-10.1-2.9-6.6 0-12.6 3.2-19.3 3.7l1.7 4.9zm135.9 197.9c-19 0-64.1 9.5-79.9 19.8l6.9 45.1c35.7 6.1 70.1 3.6 106-9.8-4.8-10-23.5-55.1-33-55.1zM340.8 177c6.6 2.8 11.5 9.2 22.7 22.1 2-1.4 7.5-5.2 7.5-8.6 0-4.9-11.8-13.2-13.2-23 11.2-5.7 25.2-6 37.6-8.9 68.1-16.4 116.3-52.9 146.8-116.7C548.3 29.3 554 16.1 554.6 2l-2 2.6c-28.4 50-33 63.2-81.3 100-31.9 24.4-69.2 40.2-106.6 54.6l-6.3-.3v-21.8c-19.6 1.6-19.7-14.6-31.6-23-18.7 20.6-31.6 40.8-58.9 51.1-12.7 4.8-19.6 10-25.9 21.8 34.9-16.4 91.2-13.5 98.8-10zM555.5 0l-.6 1.1-.3.9.6-.6zm-59.2 382.1c-33.9-56.9-75.3-118.4-150-115.5l-.3-6c-1.1-13.5 32.8 3.2 35.1-31l-14.4 7.2c-19.8-45.7-8.6-54.3-65.5-54.3-14.7 0-26.7 1.7-41.4 4.6 2.9 18.6 2.2 36.7-10.9 50.3l19.5 5.5c-1.7 3.2-2.9 6.3-2.9 9.8 0 21 42.8 2.9 42.8 33.6 0 18.4-36.8 60.1-54.9 60.1-8 0-53.7-50-53.4-60.1l.3-4.6 52.3-11.5c13-2.6 12.3-22.7-2.9-22.7-3.7 0-43.1 9.2-49.4 10.6-2-5.2-7.5-14.1-13.8-14.1-3.2 0-6.3 3.2-9.5 4-9.2 2.6-31 2.9-21.5 20.1L15.9 298.5c-5.5 1.1-8.9 6.3-8.9 11.8 0 6 5.5 10.9 11.5 10.9 8 0 131.3-28.4 147.4-32.2 2.6 3.2 4.6 6.3 7.8 8.6 20.1 14.4 59.8 85.9 76.4 85.9 24.1 0 58-22.4 71.3-41.9 3.2-4.3 6.9-7.5 12.4-6.9.6 13.8-31.6 34.2-33 43.7-1.4 10.2-1 35.2-.3 41.1 26.7 8.1 52-3.6 77.9-2.9 4.3-21 10.6-41.9 9.8-63.5l-.3-9.5c-1.4-34.2-10.9-38.5-34.8-58.6-1.1-1.1-2.6-2.6-3.7-4 2.2-1.4 1.1-1 4.6-1.7 88.5 0 56.3 183.6 111.5 229.9 33.1-15 72.5-27.9 103.5-47.2-29-25.6-52.6-45.7-72.7-79.9zm-196.2 46.1v27.2l11.8-3.4-2.9-23.8zm-68.7-150.4l24.1 61.2 21-13.8-31.3-50.9zm84.4 154.9l2 12.4c9-1.5 58.4-6.6 58.4-14.1 0-1.4-.6-3.2-.9-4.6-26.8 0-36.9 3.8-59.5 6.3z"/&gt;&lt;/svg&gt;')
+}
+.md-typeset .admonition.pied-piper,
+.md-typeset details.pied-piper {
+  border-color: rgb(43, 155, 70);
+}
+.md-typeset .pied-piper &gt; .admonition-title,
+.md-typeset .pied-piper &gt; summary {
+  background-color: rgba(43, 155, 70, 0.1);
+}
+.md-typeset .pied-piper &gt; .admonition-title::before,
+.md-typeset .pied-piper &gt; summary::before {
+  background-color: rgb(43, 155, 70);
+  -webkit-mask-image: var(--md-admonition-icon--pied-piper);
+          mask-image: var(--md-admonition-icon--pied-piper);
+}
+</code></pre></div>
+<div class="admonition pied-piper">
+<p class="admonition-title">Pied Piper</p>
+<p>自定义告诫 pied-piper</p>
+</div>
+<h1 id="二注释">二.注释<a class="headerlink" href="#二注释" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_1">1.配置<a class="headerlink" href="#1配置_1" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+    - attr_list
+    - md_in_html
+    - pymdownx.superfences
+</code></pre></div>
+<h3 id="2用法付费">2.用法(付费)<a class="headerlink" href="#2用法付费" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p class="annotate">Lorem ipsum dolor sit amet, (1) consectetur adipiscing elit.</p>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:"> I'm an annotation! I can contain <code>code</code>, <strong>formatted
+    text</strong>, images, ... basically anything that can be expressed in Markdown.</img></li>
+</ol>
+<h1 id="三按钮">三.按钮<a class="headerlink" href="#三按钮" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_2">1.配置<a class="headerlink" href="#1配置_2" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<div class="highlight"><pre><span></span><code>markdown_extensions : - attr_list
+</code></pre></div>
+<h2 id="2用法_1">2.用法<a class="headerlink" href="#2用法_1" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="添加按钮">添加按钮<a class="headerlink" href="#添加按钮" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>要将链接呈现为按钮，请使用大括号为其后缀，并向其添加类选择器。该按钮将接收选定的原色和主题色（如果处于活动状态）</p>
+<div class="highlight"><pre><span></span><code>[](){ .md-button }
+</code></pre></div>
+<p>如:</p>
+<div class="highlight"><pre><span></span><code>[bing一下](http://www.bing.com){ .md-button }
+</code></pre></div>
+<p><a class="md-button" href="http://www.bing.com">bing一下</a></p>
+<h3 id="添加主按钮">添加主按钮<a class="headerlink" href="#添加主按钮" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>如:</p>
+<div class="highlight"><pre><span></span><code>[bing一下](http://www.bing.com){ .md-button .md-button--primary }
+</code></pre></div>
+<p><a class="md-button md-button--primary" href="http://www.bing.com">bing一下</a></p>
+<h3 id="添加图标略">添加图标(略)<a class="headerlink" href="#添加图标略" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<h1 id="四代码块">四.代码块<a class="headerlink" href="#四代码块" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_3">1.配置<a class="headerlink" href="#1配置_3" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<p>允许在代码块和内联代码块上突出显示语法，并允许直接从其他文件包含源代码</p>
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+    - pymdownx.highlight:
+        anchor_linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+</code></pre></div>
+<h3 id="代码复制按钮">代码复制按钮<a class="headerlink" href="#代码复制按钮" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>全局设置</p>
+<div class="highlight"><pre><span></span><code>theme.features : - content.code.copy
+</code></pre></div>
+<p>局部设置</p>
+<div class="highlight"><pre><span></span><code>``` { .yaml .copy }
+XXXXXX
+```
+或
+``` { .yaml .no-copy }
+XXXXXX
+#sdf
+```
+</code></pre></div>
+<h3 id="代码注释">代码注释<a class="headerlink" href="#代码注释" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>mkdocs.yml:</p>
+<div class="highlight"><pre><span></span><code>theme.features : - content.code.annotate
+</code></pre></div>
+<p>XX.md:</p>
+<div class="highlight"><pre><span></span><code>```{ .yaml .annotate }
+XXXXXX
+```
+</code></pre></div>
+<h4 id="锚注释略">锚注释(略)<a class="headerlink" href="#锚注释略" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<h2 id="2用法_2">2.用法<a class="headerlink" href="#2用法_2" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="添加标题">添加标题<a class="headerlink" href="#添加标题" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>比如添加如下代码，以及得到的效果：</p>
+<div class="highlight"><pre><span></span><code>```cpp title="标题"
+XXXXXXX
+```
+</code></pre></div>
+<div class="highlight"><span class="filename">标题</span><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">XXXXXXX</span>
+</code></pre></div>
+<h3 id="添加批注">添加批注<a class="headerlink" href="#添加批注" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>在特定语言的代码块内，在规定的注释内添加 (x)，并且在代码块后加入 "(x)    批注内容"，即可实现批注效果 (批注的内容和代码块之前必须至少有一个空行)</p>
+<p>以c++为例，源码和效果：</p>
+<div class="highlight"><pre><span></span><code>```cpp
+// (4)
+int a, b; cin &gt;&gt; a &gt;&gt; b;    // (1)
+cout &lt;&lt; a + b &lt;&lt; '\n';      /* (2) */
+                            // (3)!
+```
+
+4.  批注的内容和代码块之前必须至少有一个空行
+1.  声明变量a, b并输入
+2.  输出a+b
+3.  剥离注释
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1">// (4)</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">    </span><span class="c1">// (1)</span>
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span><span class="w">      </span><span class="cm">/* (2) */</span>
+<a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">                            </span><span class="c1">// (3)!</span>
+</code></pre></div>
+<ol>
+<li>批注的内容和代码块之前必须至少有一个空行</li>
+<li>声明变量a, b并输入</li>
+<li>输出a+b</li>
+<li>剥离注释</li>
+</ol>
+<h3 id="添加行号">添加行号<a class="headerlink" href="#添加行号" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>代码块添加 <code>linenums="起始行号"</code> 属性即可</p>
+<p>源码和效果：</p>
+<div class="highlight"><pre><span></span><code>```cpp linenums="1"
+int a, b; cin &gt;&gt; a &gt;&gt; b;
+cout &lt;&lt; a + b &lt;&lt; '\n';
+```
+</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="突出显示特定行">突出显示特定行<a class="headerlink" href="#突出显示特定行" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>代码块添加属性 hl_lines="行号列表" 即可</p>
+<p>源码和效果:</p>
+<div class="highlight"><pre><span></span><code>``` cpp linenums="11" hl_lines="2 3"
+int a, b; 
+cin &gt;&gt; a &gt;&gt; b;
+cout &lt;&lt; a + b &lt;&lt; '\n';
+```
+</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="hll"><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">  </span><span class="c1">// (1)!</span>
+</span><a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="hll"><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
+<ol>
+<li>hl_lines 中指定的是绝对行号，与linenums的值无关</li>
+</ol>
+<h3 id="突出显示内联代码块">突出显示内联代码块<a class="headerlink" href="#突出显示内联代码块" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>如下内源码将高亮语言本身特色的元素
+    <code class="highlight">内联代码...</code></p>
+<p>源码和效果:</p>
+<div class="highlight"><pre><span></span><code>`#!cpp int a, b; cin &gt;&gt; a &gt;&gt; b; cout &lt;&lt; a + b &lt;&lt; '\n';`
+</code></pre></div>
+<p><code class="highlight"><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span></code></p>
+<h3 id="嵌入外部文件">嵌入外部文件<a class="headerlink" href="#嵌入外部文件" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>如：</p>
+<div class="highlight"><pre><span></span><code>``` title=".browserslistrc"
+
+```
+</code></pre></div>
+<p>// 参考 : <a href="https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#snippets-notation">--8&lt;--记法</a></p>
+<h2 id="2定制">2.定制<a class="headerlink" href="#2定制" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="自定义语法主题略">自定义语法主题(略)<a class="headerlink" href="#自定义语法主题略" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<h3 id="批注工具宽度">批注工具宽度<a class="headerlink" href="#批注工具宽度" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><span class="filename">docs/css/extra.css</span><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>:root {
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>  --md-tooltip-width: 600px;
+<a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a>}
+</code></pre></div>
+<h3 id="带数字的注释">带数字的注释<a class="headerlink" href="#带数字的注释" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>为了避免混淆，新版本采用了 "+"作为注释符号，而旧版本使用 数字 作为注释符号</p>
+<p>以下代码可以恢复旧版本的注释</p>
+<div class="highlight"><span class="filename">docs/css/extra.css</span><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>.md-typeset .md-annotation__index &gt; ::before {
+<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>  content: attr(data-md-annotation-id);
+<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a>}
+<a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a>.md-typeset :focus-within &gt; .md-annotation__index &gt; ::before {
+<a href="#__codelineno-14-5" id="__codelineno-14-5" name="__codelineno-14-5"></a>  transform: none;
+<a href="#__codelineno-14-6" id="__codelineno-14-6" name="__codelineno-14-6"></a>}
+</code></pre></div>
+<h1 id="5内容选项卡付费">5.内容选项卡(付费)<a class="headerlink" href="#5内容选项卡付费" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_4">1.配置<a class="headerlink" href="#1配置_4" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+    - pymdownx.superfences
+    - pymdownx.tabbed:
+        alternate_style: true
+</code></pre></div>
+<h3 id="锚链接">锚链接<a class="headerlink" href="#锚链接" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>为了链接到内容选项卡并更轻松地共享它们，Insiders 会自动为每个内容选项卡添加一个锚链接</p>
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+    - pymdownx.tabbed:
+        slugify: !!python/object/apply:pymdownx.slugs.slugify
+            kwds:
+                case: lower
+</code></pre></div>
+<h3 id="链接的内容选项卡">链接的内容选项卡<a class="headerlink" href="#链接的内容选项卡" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>启用后，整个文档网站中的所有内容选项卡都将链接，并在用户单击选项卡时切换到同一标签</p>
+<div class="highlight"><pre><span></span><code>theme.features : - content.tabs.link
+</code></pre></div>
+<h2 id="2用法_3">2.用法<a class="headerlink" href="#2用法_3" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">源码</label><label for="__tabbed_1_2">效果</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>=== "选项卡1"
+    ``` c
+    #include &lt;stdio.h&gt;
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+=== "选项卡2"
+    ``` c++
+    #include &lt;iostream&gt;
+
+    int main(void) {
+      std::cout &lt;&lt; "Hello world!" &lt;&lt; std::endl;
+      return 0;
+    }
+    ```
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">选项卡1</label><label for="__tabbed_2_2">选项卡2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a>
+<a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-17-4" id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">"Hello world!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<a href="#__codelineno-17-5" id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a href="#__codelineno-17-6" id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a>
+<a href="#__codelineno-18-3" id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-18-4" id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Hello world!"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<a href="#__codelineno-18-5" id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a href="#__codelineno-18-6" id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</input></input></div>
+</div>
+</div>
+</input></input></div>
+<h1 id="6数据表">6.数据表<a class="headerlink" href="#6数据表" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_5">1.配置<a class="headerlink" href="#1配置_5" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<div class="highlight"><pre><span></span><code>markdown_extensions : - tables
+</code></pre></div>
+<h2 id="2用法_4">2.用法<a class="headerlink" href="#2用法_4" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="列对齐">列对齐<a class="headerlink" href="#列对齐" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"/><input id="__tabbed_3_2" name="__tabbed_3" type="radio"/><input id="__tabbed_3_3" name="__tabbed_3" type="radio"/><div class="tabbed-labels"><label for="__tabbed_3_1">左</label><label for="__tabbed_3_2">中</label><label for="__tabbed_3_3">右</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>| Method      | Description                          |
+| :---------- | :----------------------------------- |
+| `GET`       | :material-check:     Fetch resource  |
+| `PUT`       | :material-check-all: Update resource |
+| `DELETE`    | :material-close:     Delete resource |
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>GET</code></td>
+<td align="left"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"></path></svg></span>     Fetch resource</td>
+</tr>
+<tr>
+<td align="left"><code>PUT</code></td>
+<td align="left"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"></path></svg></span> Update resource</td>
+</tr>
+<tr>
+<td align="left"><code>DELETE</code></td>
+<td align="left"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg></span>     Delete resource</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>| Method      | Description                          |
+| :---------: | :----------------------------------: |
+| `GET`       | :material-check:     Fetch resource  |
+| `PUT`       | :material-check-all: Update resource |
+| `DELETE`    | :material-close:     Delete resource |
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="center">Method</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>GET</code></td>
+<td align="center"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"></path></svg></span>     Fetch resource</td>
+</tr>
+<tr>
+<td align="center"><code>PUT</code></td>
+<td align="center"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"></path></svg></span> Update resource</td>
+</tr>
+<tr>
+<td align="center"><code>DELETE</code></td>
+<td align="center"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg></span>     Delete resource</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>| Method      | Description                          |
+| ----------: | -----------------------------------: |
+| `GET`       | :material-check:     Fetch resource  |
+| `PUT`       | :material-check-all: Update resource |
+| `DELETE`    | :material-close:     Delete resource |
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="right">Method</th>
+<th align="right">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right"><code>GET</code></td>
+<td align="right"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"></path></svg></span>     Fetch resource</td>
+</tr>
+<tr>
+<td align="right"><code>PUT</code></td>
+<td align="right"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"></path></svg></span> Update resource</td>
+</tr>
+<tr>
+<td align="right"><code>DELETE</code></td>
+<td align="right"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg></span>     Delete resource</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">基本结构</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="o">|</span><span class="w">   </span><span class="n">字段1</span><span class="w"> </span><span class="o">|</span><span class="w">   </span><span class="n">字段2</span><span class="w"> </span><span class="o">|</span>
+<a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="o">|</span><span class="w"> </span><span class="o">:------:</span><span class="w">  </span><span class="o">|</span><span class="w">   </span><span class="o">:---:</span><span class="w">   </span><span class="o">|</span>
+<a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="o">|</span><span class="w">           </span><span class="o">|</span><span class="w">           </span><span class="o">|</span><span class="c1">//(1)!</span>
+<a href="#__codelineno-19-4" id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="o">|</span><span class="w">           </span><span class="o">|</span><span class="w">           </span><span class="o">|</span><span class="c1">//(2)!</span>
+<a href="#__codelineno-19-5" id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="p">....</span>
+<a href="#__codelineno-19-6" id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="o">|</span><span class="w">           </span><span class="o">|</span><span class="w">           </span><span class="o">|</span><span class="c1">//(3)!</span>
+</code></pre></div>
+<ol>
+<li>第一条记录</li>
+<li>第二条记录</li>
+<li>第n条记录</li>
+</ol>
+</div>
+<h2 id="3定制_1">3.定制<a class="headerlink" href="#3定制_1" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="可排序表">可排序表<a class="headerlink" href="#可排序表" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"/><input id="__tabbed_4_2" name="__tabbed_4" type="radio"/><div class="tabbed-labels"><label for="__tabbed_4_1">mkdocs.yml</label><label for="__tabbed_4_2">XXX.js</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>extra_javascript : 
+    - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+    - XXX.js
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>document$.subscribe(function() {
+  var tables = document.querySelectorAll("article table:not([class])")
+  tables.forEach(function(table) {
+    new Tablesort(table)
+  })
+})
+</code></pre></div>
+</div>
+</div>
+</div>
+<h1 id="7图">7.图<a class="headerlink" href="#7图" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<p>图表有助于传达不同技术组件之间的复杂关系和互连，并且是项目文档的重要补充。MkDocs的材料与Mermaid.js集成，这是一种非常流行且灵活的图表绘制解决方案</p>
+<h2 id="1配置_6">1.配置<a class="headerlink" href="#1配置_6" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+</code></pre></div>
+<h2 id="2用法_5">2.用法<a class="headerlink" href="#2用法_5" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="流程图">流程图<a class="headerlink" href="#流程图" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>流程图是表示工作流或流程的图表</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"/><input id="__tabbed_5_2" name="__tabbed_5" type="radio"/><div class="tabbed-labels"><label for="__tabbed_5_1">源码</label><label for="__tabbed_5_2">效果</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>``` mermaid
+graph LR
+  A[Start] --&gt; B{Error?};
+  B --&gt;|Yes| C[Hmm...];
+  C --&gt; D[Debug];
+  D --&gt; B;
+  B ----&gt;|No| E[Yay!];
+```
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<pre class="mermaid"><code>graph LR
+  A[Start] --&gt; B{Error?};
+  B --&gt;|Yes| C[Hmm...];
+  C --&gt; D[Debug];
+  D --&gt; B;
+  B ----&gt;|No| E(Yay!);</code></pre>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<table>
+<thead>
+<tr>
+<th align="center">元素</th>
+<th align="center">作用</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>--&gt;</code></td>
+<td align="center">结点之间的有向边</td>
+<td align="center">可拉长, 如:<code>-----&gt;</code></td>
+</tr>
+<tr>
+<td align="center"><code>|XXX|</code></td>
+<td align="center">结点之间的关系(如: 边权)</td>
+<td align="center">紧跟在<code>--&gt;</code>右边</td>
+</tr>
+<tr>
+<td align="center"><code>[XXX]</code></td>
+<td align="center">结点别名; 方框</td>
+<td align="center">紧跟在结点右边</td>
+</tr>
+<tr>
+<td align="center"><code>{XXX}</code></td>
+<td align="center">结点别名; 菱形</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>(XXX)</code></td>
+<td align="center">结点别名; 圆角方框</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">graph</td>
+<td align="center">声明流程图</td>
+<td align="center">默认为纵向图</td>
+</tr>
+<tr>
+<td align="center">graph LR</td>
+<td align="center">横向图</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="序列图">序列图<a class="headerlink" href="#序列图" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>序列图将特定方案描述为多个对象或参与者之间的顺序交互，包括这些参与者之间交换的消息</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"/><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">源码</label><label for="__tabbed_6_2">效果</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>``` mermaid
+sequenceDiagram
+autonumber
+
+  Alice -&gt;&gt; John: 你好，John，你好吗?
+  loop 健康检查
+      John -&gt;&gt; John: 对抗疑病症
+  end
+  Note right of John: 理性思维!
+  John --&gt;&gt; Alice: 没, 没事!
+  John -&gt;&gt; Bob: 你还好吗?
+  Bob --&gt;&gt; John: "好"极了!
+```
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<pre class="mermaid"><code>sequenceDiagram
+autonumber
+
+  Alice -&gt;&gt; John: 你好，John，你好吗?
+  loop 健康检查
+      John -&gt;&gt; John: 对抗疑病症
+  end
+  Note right of John: 理性思维!
+  John --&gt;&gt; Alice: 没, 没事!
+  John -&gt;&gt; Bob: 你还好吗?
+  Bob --&gt;&gt; John: "好"极了!
+  John --&gt; Bob: 我两都没事</code></pre>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<table>
+<thead>
+<tr>
+<th align="center">元素</th>
+<th align="center">作用</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>-&gt;</code></td>
+<td align="center">结点之间的无向实边</td>
+<td align="center">不可拉长</td>
+</tr>
+<tr>
+<td align="center"><code>-&gt;&gt;</code></td>
+<td align="center">结点之间的有向实边</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>--&gt;</code></td>
+<td align="center">结点之间的无向虚边</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><code>--&gt;&gt;</code></td>
+<td align="center">结点之间的有向虚边</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">loop 循环名 ... end</td>
+<td align="center">循环</td>
+<td align="center">循环内的包含不少于1个语句</td>
+</tr>
+<tr>
+<td align="center">sequenceDiagram</td>
+<td align="center">声明序列图</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">autonumber</td>
+<td align="center">自动为交互行为标号</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="状态图">状态图<a class="headerlink" href="#状态图" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>状态图是描述系统行为的好工具，将其分解为有限数量的状态，以及这些状态之间的转换</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">源码</label><label for="__tabbed_7_2">效果</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>``` mermaid
+stateDiagram-v2
+state fk &lt;&lt;fork&gt;&gt;
+state jn &lt;&lt;join&gt;&gt;
+
+[*] --&gt; fk
+fk --&gt; a
+fk --&gt; b
+fk --&gt; c
+
+a --&gt; jn
+b --&gt; jn
+c --&gt; jn
+jn --&gt; [*]
+
+```
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<pre class="mermaid"><code>stateDiagram-v2
+state fk &lt;&lt;fork&gt;&gt;
+state jn &lt;&lt;join&gt;&gt;
+
+[*] --&gt; fk
+fk --&gt; a
+fk --&gt; b
+fk --&gt; c
+
+a --&gt; jn
+b --&gt; jn
+c --&gt; jn
+jn --&gt; [*]
+</code></pre>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<table>
+<thead>
+<tr>
+<th align="center">元素</th>
+<th align="center">功能</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>[*]</code></td>
+<td align="center">源点/汇点</td>
+<td align="center">仅当<code>[*]</code>位于<code>--&gt;</code>左边时为源点,反之为汇点</td>
+</tr>
+<tr>
+<td align="center"><code>--&gt;</code></td>
+<td align="center">有向边</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">stateDiagram-v2</td>
+<td align="center">声明状态图</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">state XXX &lt;&lt;<code>fork</code>/<code>join</code>&gt;&gt;</td>
+<td align="center">将XXX定义为<code>fork</code>或<code>join</code>类似于c中的宏</td>
+<td align="center"><code>fork</code>意为'分叉'，在图中作为局部源点, 反之<code>join</code>作为局部汇点</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="类图">类图<a class="headerlink" href="#类图" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>类图是面向对象编程的核心，通过将实体建模为类和它们之间的关系来描述系统的结构:</p>
+<pre class="mermaid"><code>classDiagram
+  Person &lt;|-- Student
+  Person &lt;|-- Professor
+  Person : +String name
+  Person : +String phoneNumber
+  Person : +String emailAddress
+  Person: +purchaseParkingPass()
+  Address "1" &lt;-- "0..1" Person:lives at
+  class Student{
+    +int no // 学生号
+    +int averageMark    // 平均分
+    +isEligibleToEnrol() // 
+    +getSeminarsTaken()
+    +getSomeShit()
+    +setSomeShit()
+    -eatSomeShit()
+  }
+  class Professor{
+    +int salary
+  }
+  class Address{
+    +String street
+    +String city
+    +String state
+    +int postalCode
+    +String country
+    -validate()
+    +outputAsLabel()  
+  }</code></pre>
+<h3 id="其他图表类型"><a href="https://mermaid.js.org/syntax/flowchart.html">其他图表类型</a><a class="headerlink" href="#其他图表类型" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<pre class="mermaid"><code>pie title Pets adopted by volunteers
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15
+</code></pre>
+<h1 id="8脚注">8.脚注<a class="headerlink" href="#8脚注" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_7">1.配置<a class="headerlink" href="#1配置_7" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<div class="highlight"><pre><span></span><code>markdown_extensions : - footnotes
+</code></pre></div>
+<h2 id="2用法_6">2.用法<a class="headerlink" href="#2用法_6" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="添加脚注引用">添加脚注引用<a class="headerlink" href="#添加脚注引用" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="__tabbed_8_1">源码</label><label for="__tabbed_8_2">效果</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
+
+[^1]:   第一个脚注内容
+[^2]:
+    第二个脚注内容
+    并且是一个多行脚注
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Lorem ipsum<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> dolor sit amet, consectetur adipiscing elit.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+</div>
+</div>
+</div>
+<h1 id="9文本格式">9.(文本)格式<a class="headerlink" href="#9文本格式" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_8">1.配置<a class="headerlink" href="#1配置_8" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+    - pymdownx.critic
+    - pymdownx.caret
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.tilde
+</code></pre></div>
+<h2 id="用法">用法<a class="headerlink" href="#用法" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="突出显示所做的修改">突出显示所做的修改<a class="headerlink" href="#突出显示所做的修改" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code>- { --删除文本-- }
+- { ++添加文本++ }
+- { ~~原文本~&gt;现有文本~~ }
+- { &gt;&gt;注释&lt;&lt; }
+- { ==高亮== }
+</code></pre></div>
+<ul>
+<li><del class="critic">删除文本</del></li>
+<li><ins class="critic">添加文本</ins></li>
+<li><del class="critic">原文本</del><ins class="critic">现有文本</ins></li>
+<li><span class="critic comment">注释</span></li>
+<li><mark class="critic">高亮</mark></li>
+</ul>
+<p><mark>注意：这些格式对代码块有效; 为了方便演示, 上面的代码块在{ }旁边加了空格以使格式失效</mark></p>
+<h3 id="高亮文本">高亮文本<a class="headerlink" href="#高亮文本" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code>- ==高亮==
+- ^^下划线^^
+- ~~删除线~~
+</code></pre></div>
+<ul>
+<li><mark>高亮</mark></li>
+<li><ins>下划线</ins></li>
+<li><del>删除线</del></li>
+</ul>
+<h3 id="上下标">上下标<a class="headerlink" href="#上下标" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code>- f~x~
+- e^x^
+</code></pre></div>
+<ul>
+<li>f<sub>x</sub></li>
+<li>e<sup>x</sup></li>
+</ul>
+<h3 id="添加键盘键">添加键盘键<a class="headerlink" href="#添加键盘键" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-delete">Del</kbd></span></p>
+<h1 id="10网格">10.网格<a class="headerlink" href="#10网格" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_9">1.配置<a class="headerlink" href="#1配置_9" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+    - attr_list
+    - md_in_html
+</code></pre></div>
+<h2 id="2用法没用-略">2.用法(没用, 略)<a class="headerlink" href="#2用法没用-略" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h1 id="11图标表情符号">11.图标，表情符号<a class="headerlink" href="#11图标表情符号" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_10">1.配置<a class="headerlink" href="#1配置_10" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+    - attr_list
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+</code></pre></div>
+<h2 id="2用法_7">2.用法<a class="headerlink" href="#2用法_7" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="图标">图标<a class="headerlink" href="#图标" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>获取图标短代码的方式: <code>python3.9/Lib/site-packages/material/.icons</code>路径下的<code>.svg</code>符号文件相对<code>.icons</code>的路径，用<code>-</code>替代其中的<code>/</code>，即可得到图标的短代码</p>
+<p>引用方式: <code>:短代码:</code></p>
+<div class="highlight"><pre><span></span><code>:octicons-heart-fill-24:
+</code></pre></div>
+<p><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408z"></path></svg></span></p>
+<h3 id="表情符号">表情符号<a class="headerlink" href="#表情符号" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>如果您使用的是 <a href="https://twemoji.twitter.com/">Twemoji</a>（推荐），您可以在<a href="https://emojipedia.org/twitter/">表情百科</a>上查找简码</p>
+<h3 id="颜色-和-动画">颜色 和 动画<a class="headerlink" href="#颜色-和-动画" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"/><input id="__tabbed_9_2" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="__tabbed_9_1">XXX.css</label><label for="__tabbed_9_2">XXX.md</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>.类名{
+    /* 颜色 */
+    color: cyan;
+    /* 动画(心跳) */
+    animation: heart 1000ms infinite;
+}
+/* 有关动画(心跳)的css配置 */
+@keyframes heart {
+    0%, 40%, 80%, 100% {
+        transform: scale(1);
+    }
+    20%, 60% {
+        transform: scale(1.15);
+    }
+}
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>:octicons-heart-fill-24:{ .类名 }
+</code></pre></div>
+<p>效果: <span class="twemoji hb"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408z"></path></svg></span></p>
+</div>
+</div>
+</div>
+<h3 id="在导航侧边栏中使用图标报错">在导航、侧边栏中使用图标(报错)<a class="headerlink" href="#在导航侧边栏中使用图标报错" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>借助内置排版插件typeset使得导航和标签保留markdown和html格式，即可实现</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"/><input id="__tabbed_10_2" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="__tabbed_10_1">cmd</label><label for="__tabbed_10_2">mkdocs.yml</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>// 不会安装typeset!
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>plugins:
+    - typeset
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><code class="highlight"><span class="kt">int</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>不会安装typeset!</p>
+</div>
+<h2 id="3定制略">3.定制(略)<a class="headerlink" href="#3定制略" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h1 id="12图像">12.图像<a class="headerlink" href="#12图像" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_11">1.配置<a class="headerlink" href="#1配置_11" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+    - attr_list
+    - md_in_html
+</code></pre></div>
+<h3 id="插件glightbox">插件——glightbox<a class="headerlink" href="#插件glightbox" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>glightbox插件可提供<strong>图像缩放</strong>功能</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio"/><input id="__tabbed_11_2" name="__tabbed_11" type="radio"/><div class="tabbed-labels"><label for="__tabbed_11_1">cmd</label><label for="__tabbed_11_2">mkdocs.yml</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>pip install mkdocs-glightbox
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>plugins : - glightbox
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="2用法_8">2.用法<a class="headerlink" href="#2用法_8" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="图片对齐">图片对齐<a class="headerlink" href="#图片对齐" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<details class="源码">
+<summary>源码</summary>
+<div class="highlight"><pre><span></span><code>![](https://pic.peo.pw/a/2023/01/14/63c29b784ad44.png){align=left}
+
+    只因你太美 baby 只因你太美 baby
+    只因你实在是太美 baby 只因你太美 baby
+    迎面走来的你让我如此蠢蠢欲动
+    这种感觉我从未有
+    Cause I got a crush on you who you
+    你是我的我是你的谁
+    再多一眼看一眼就会爆炸
+    再近一点靠近点快被融化
+    想要把你占为己有baby bae
+    不管走到哪里都会想起的人是你 you you
+    我应该拿你怎样
+    uh 所有人都在看着你
+    我的心总是不安
+    oh 我现在已病入膏肓
+    ...
+</code></pre></div>
+</details>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://pic.peo.pw/a/2023/01/14/63c29b784ad44.png"><img align="left" alt="" src="https://pic.peo.pw/a/2023/01/14/63c29b784ad44.png"/></a></p>
+<div class="highlight"><pre><span></span><code>只因你太美 baby 只因你太美 baby
+只因你实在是太美 baby 只因你太美 baby
+迎面走来的你让我如此蠢蠢欲动
+这种感觉我从未有
+Cause I got a crush on you who you
+你是我的我是你的谁
+再多一眼看一眼就会爆炸
+再近一点靠近点快被融化
+想要把你占为己有baby bae
+不管走到哪里都会想起的人是你 you you
+我应该拿你怎样
+uh 所有人都在看着你
+我的心总是不安
+oh 我现在已病入膏肓
+...
+</code></pre></div>
+<iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="https://music.163.com/outchain/player?type=2&amp;id=1340439829&amp;auto=0&amp;height=66" width="100%"></iframe>
+<iframe border="0" frameborder="no" height="86" marginheight="0" marginwidth="0" src="https://music.163.com/outchain/player?type=2&amp;id=1948109333&amp;auto=0&amp;height=66" width="100%"></iframe>
+<h3 id="图片说明">图片说明<a class="headerlink" href="#图片说明" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="admonition 源码">
+<p class="admonition-title">源码</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="p">&lt;</span><span class="nt">figure</span> <span class="na">markdown</span><span class="p">&gt;</span>
+<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a>  ![kun](https://pic.peo.pw/a/2023/01/14/63c29b784ad44.png){ width="300" }
+<a href="#__codelineno-20-3" id="__codelineno-20-3" name="__codelineno-20-3"></a>  <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span>kun<span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+<a href="#__codelineno-20-4" id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<figure>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://pic.peo.pw/a/2023/01/14/63c29b784ad44.png"><img alt="kun" src="https://pic.peo.pw/a/2023/01/14/63c29b784ad44.png" width="300"/></a>
+</p>
+<figcaption>kun</figcaption>
+</figure>
+<h3 id="图像延迟加载">图像延迟加载<a class="headerlink" href="#图像延迟加载" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a>![kun](https://pic.peo.pw/a/2023/01/14/63c29b784ad44.png){ loading=lazy }
+</code></pre></div>
+<h3 id="明暗模式">明暗模式<a class="headerlink" href="#明暗模式" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code>![kun](https://pic.peo.pw/a/2023/01/14/63c29b784ad44.png#only-light)
+![kun](https://pic.peo.pw/a/2023/01/14/63c29b784ad44.png#only-dark)
+</code></pre></div>
+<h1 id="13列表">13.列表<a class="headerlink" href="#13列表" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_12">1.配置<a class="headerlink" href="#1配置_12" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+    - def_list
+    - pymdownx.tasklist:
+        custom_checkbox: true
+</code></pre></div>
+<h2 id="2用法_9">2.用法<a class="headerlink" href="#2用法_9" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="无序列表">无序列表<a class="headerlink" href="#无序列表" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>!!! 支持三种无需列表(可任意嵌套)</p>
+<div class="highlight"><pre><span></span><code>`+ `
+`- `
+`* `
+</code></pre></div>
+<h3 id="有序列表">有序列表<a class="headerlink" href="#有序列表" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="err">`</span><span class="n">x</span><span class="p">.</span><span class="w"> </span><span class="err">`</span><span class="w">   </span><span class="c1">// (1)!</span>
+</code></pre></div>
+<ol>
+<li>x表示某个整数</li>
+</ol>
+<h3 id="定义列表">定义列表<a class="headerlink" href="#定义列表" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="admonition 源码">
+<p class="admonition-title">源码<dl>
+<dt><code>key1</code></dt>
+<dd>XXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXX</dd>
+<dt><code>key2</code></dt>
+<dd>
+<p>XXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXX</p>
+<p>XXXXXXXXXXXXXXX</p>
+</dd>
+</dl>
+</p>
+</div>
+<dl>
+<dt><code>key1</code></dt>
+<dd>XXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXX</dd>
+<dt><code>key2</code></dt>
+<dd>
+<p>XXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXX</p>
+<p>XXXXXXXXXXXXXXX</p>
+</dd>
+</dl>
+<h1 id="14mathjax">14.MathJax<a class="headerlink" href="#14mathjax" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_13">1.配置<a class="headerlink" href="#1配置_13" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio"/><input id="__tabbed_12_2" name="__tabbed_12" type="radio"/><div class="tabbed-labels"><label for="__tabbed_12_1">mkdocs.yml</label><label for="__tabbed_12_2">XXX.js</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+    - pymdownx.arithmatex:
+        generic: true
+
+extra_javascript:
+    - XXX.js
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>window.MathJax = {
+  tex: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    ignoreHtmlClass: ".*|",
+    processHtmlClass: "arithmatex"
+  }
+};
+
+document$.subscribe(() =&gt; { 
+  MathJax.typesetPromise()
+})
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="2用法_10">2.用法<a class="headerlink" href="#2用法_10" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<p>MathJax是一种在浏览器中显示数学内容的美观且易于访问的方式，增加了对不同符号（例如<a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX</a>，<a href="https://en.wikipedia.org/wiki/MathML">MathML</a>，<a href="http://asciimath.org/">AsciiMath</a>）的数学排版的支持，并且可以轻松地与MkDocs的材料集成</p>
+<h3 id="块语法">块语法<a class="headerlink" href="#块语法" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code>$$  ...  $$ 或 \[  ...  \]
+
+又或者
+
+$$
+    ...
+$$
+
+或
+
+\[
+    ...
+\]
+</code></pre></div>
+<h3 id="内联语法">内联语法<a class="headerlink" href="#内联语法" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code>$  ...  $ 或 \(  ...  \)
+</code></pre></div>
+<h1 id="十五工具提示">十五.工具提示<a class="headerlink" href="#十五工具提示" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_14">1.配置<a class="headerlink" href="#1配置_14" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+    - abbr
+    - attr_list
+    - pymdownx.snippets
+</code></pre></div>
+<h3 id="改进的工具提示">改进的工具提示<a class="headerlink" href="#改进的工具提示" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code>theme:
+    features:
+        - content.tooltips
+</code></pre></div>
+<h2 id="2用法_11">2.用法<a class="headerlink" href="#2用法_11" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="工具提示">工具提示<a class="headerlink" href="#工具提示" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<ul>
+<li>任何链接都可加上工具提示</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-23-1" id="__codelineno-23-1" name="__codelineno-23-1"></a>[kun(悬停我!)](https://pic.peo.pw/a/2023/01/14/63c29b784ad44.png <mark class="critic">"ikun们的珍宝"</mark>)
+</code></pre></div>
+<a href="https://pic.peo.pw/a/2023/01/14/63c29b784ad44.png" title="ikun们的珍宝">kun(悬停我!)</a></p>
+<ul>
+<li>还可以将工具提示添加到链接引用中</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-24-1" id="__codelineno-24-1" name="__codelineno-24-1"></a>[Hover me][xxx]
+<a href="#__codelineno-24-2" id="__codelineno-24-2" name="__codelineno-24-2"></a>[xxx]: https://example.com "我是一个工具提示"
+</code></pre></div>
+<a href="https://example.com" title="我是一个工具提示">Hover me</a></p>
+<ul>
+<li>对于所有元素, 此种方法都可以添加工具提示</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-25-1" id="__codelineno-25-1" name="__codelineno-25-1"></a>元素{ title="工具提示的内容" }
+</code></pre></div>
+<img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title="工具提示的内容"/></p>
+<h3 id="缩写">缩写<a class="headerlink" href="#缩写" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="admonition 源码">
+<p class="admonition-title">源码</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-26-1" id="__codelineno-26-1" name="__codelineno-26-1"></a>*[维护]: $\int_{a}^{b}f_x d_x$
+<a href="#__codelineno-26-2" id="__codelineno-26-2" name="__codelineno-26-2"></a>
+<a href="#__codelineno-26-3" id="__codelineno-26-3" name="__codelineno-26-3"></a>HTML 规范由 W3C 维护
+<a href="#__codelineno-26-4" id="__codelineno-26-4" name="__codelineno-26-4"></a>
+<a href="#__codelineno-26-5" id="__codelineno-26-5" name="__codelineno-26-5"></a>*[HTML]: Hyper Text Markup Language
+<a href="#__codelineno-26-6" id="__codelineno-26-6" name="__codelineno-26-6"></a>*[W3C]: World Wide Web Consortium
+</code></pre></div>
+</div>
+<p><abbr title="Hyper Text Markup Language">HTML</abbr> 规范由 <abbr title="World Wide Web Consortium">W3C</abbr> <abbr title="$\int_{a}^{b}f_x d_x$">维护</abbr></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ol>
+<li>缩写的解释内容可以在使用前或使用后定义, 使用缩写时左右必须有空格</li>
+<li>对于缩写的解释内容是不支持mathjax的</li>
+</ol>
+</div>
+<h3 id="词汇表">词汇表<a class="headerlink" href="#词汇表" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>添加 Snippets 扩展以通过移动专用文件中的所有缩写来实现简单的词汇表, 并使用以下配置将此文件自动附加到所有页面:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio"/><input id="__tabbed_13_2" name="__tabbed_13" type="radio"/><div class="tabbed-labels"><label for="__tabbed_13_1">mkdocs.yml</label><label for="__tabbed_13_2"><mark class="critic">includes/abbreviations.md</mark></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+    - pymdownx.snippets:
+        auto_append:
+            - <mark class="critic">includes/abbreviations.md</mark>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>*[HTML]: Hyper Text Markup Language
+*[W3C]: World Wide Web Consortium
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>第一个脚注内容 <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p>第二个脚注内容
+并且是一个多行脚注 <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            回到页面顶部
+          </a>
+</main>
+<footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: 设置" class="md-footer__link md-footer__link--prev" href="../%E8%AE%BE%E7%BD%AE/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                  上一页
+                </span>
+                设置
+              </div>
+</div>
+</a>
+<a aria-label="下一页: 配置文件" class="md-footer__link md-footer__link--next" href="../%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                  下一页
+                </span>
+                配置文件
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2022 - 2023 travis
+    </div>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="http://www.baidu.com" rel="noopener" target="_blank" title="指针">
+<svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"></path></svg>
+</a>
+<a class="md-social__link" href="http://www.baidu.com" rel="noopener" target="_blank" title="www.baidu.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>
+</a>
+<a class="md-social__link" href="http://www.baidu.com" rel="noopener" target="_blank" title="www.baidu.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="http://www.baidu.com" rel="noopener" target="_blank" title="www.baidu.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+</a>
+<a class="md-social__link" href="http://www.baidu.com" rel="noopener" target="_blank" title="www.baidu.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+</a>
+<a class="md-social__link" href="http://www.baidu.com" rel="noopener" target="_blank" title="www.baidu.com">
+<svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"></path></svg>
+</a>
+<a class="md-social__link" href="http://www.baidu.com" rel="noopener" target="_blank" title="www.baidu.com">
+<svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M244 246c-3.2-2-6.3-2.9-10.1-2.9-6.6 0-12.6 3.2-19.3 3.7l1.7 4.9zm135.9 197.9c-19 0-64.1 9.5-79.9 19.8l6.9 45.1c35.7 6.1 70.1 3.6 106-9.8-4.8-10-23.5-55.1-33-55.1zM340.8 177c6.6 2.8 11.5 9.2 22.7 22.1 2-1.4 7.5-5.2 7.5-8.6 0-4.9-11.8-13.2-13.2-23 11.2-5.7 25.2-6 37.6-8.9 68.1-16.4 116.3-52.9 146.8-116.7C548.3 29.3 554 16.1 554.6 2l-2 2.6c-28.4 50-33 63.2-81.3 100-31.9 24.4-69.2 40.2-106.6 54.6l-6.3-.3v-21.8c-19.6 1.6-19.7-14.6-31.6-23-18.7 20.6-31.6 40.8-58.9 51.1-12.7 4.8-19.6 10-25.9 21.8 34.9-16.4 91.2-13.5 98.8-10zM555.5 0l-.6 1.1-.3.9.6-.6zm-59.2 382.1c-33.9-56.9-75.3-118.4-150-115.5l-.3-6c-1.1-13.5 32.8 3.2 35.1-31l-14.4 7.2c-19.8-45.7-8.6-54.3-65.5-54.3-14.7 0-26.7 1.7-41.4 4.6 2.9 18.6 2.2 36.7-10.9 50.3l19.5 5.5c-1.7 3.2-2.9 6.3-2.9 9.8 0 21 42.8 2.9 42.8 33.6 0 18.4-36.8 60.1-54.9 60.1-8 0-53.7-50-53.4-60.1l.3-4.6 52.3-11.5c13-2.6 12.3-22.7-2.9-22.7-3.7 0-43.1 9.2-49.4 10.6-2-5.2-7.5-14.1-13.8-14.1-3.2 0-6.3 3.2-9.5 4-9.2 2.6-31 2.9-21.5 20.1L15.9 298.5c-5.5 1.1-8.9 6.3-8.9 11.8 0 6 5.5 10.9 11.5 10.9 8 0 131.3-28.4 147.4-32.2 2.6 3.2 4.6 6.3 7.8 8.6 20.1 14.4 59.8 85.9 76.4 85.9 24.1 0 58-22.4 71.3-41.9 3.2-4.3 6.9-7.5 12.4-6.9.6 13.8-31.6 34.2-33 43.7-1.4 10.2-1 35.2-.3 41.1 26.7 8.1 52-3.6 77.9-2.9 4.3-21 10.6-41.9 9.8-63.5l-.3-9.5c-1.4-34.2-10.9-38.5-34.8-58.6-1.1-1.1-2.6-2.6-3.7-4 2.2-1.4 1.1-1 4.6-1.7 88.5 0 56.3 183.6 111.5 229.9 33.1-15 72.5-27.9 103.5-47.2-29-25.6-52.6-45.7-72.7-79.9zm-196.2 46.1v27.2l11.8-3.4-2.9-23.8zm-68.7-150.4 24.1 61.2 21-13.8-31.3-50.9zm84.4 154.9 2 12.4c9-1.5 58.4-6.6 58.4-14.1 0-1.4-.6-3.2-.9-4.6-26.8 0-36.9 3.8-59.5 6.3z"></path></svg>
+</a>
+<a class="md-social__link" href="http://www.baidu.com" rel="noopener" target="_blank" title="www.baidu.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M326.3 218.8c0 20.5-16.7 37.2-37.2 37.2h-70.3v-74.4h70.3c20.5 0 37.2 16.7 37.2 37.2zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-128.1-37.2c0-47.9-38.9-86.8-86.8-86.8H169.2v248h49.6v-74.4h70.3c47.9 0 86.8-38.9 86.8-86.8z"></path></svg>
+</a>
+<a class="md-social__link" href="http://www.baidu.com" rel="noopener" target="_blank" title="www.baidu.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"></path></svg>
+</a>
+<a class="md-social__link" href="http://www.baidu.com" rel="noopener" target="_blank" title="www.baidu.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+</a>
+<a class="md-social__link" href="mailto:1506218507@qq.com" rel="noopener" target="_blank" title="给梁雄大人打邮箱">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-consent" data-md-component="consent" hidden="" id="__consent">
+<div class="md-consent__overlay"></div>
+<aside class="md-consent__inner">
+<form class="md-consent__form md-grid md-typeset" name="consent">
+<h4>None</h4>
+<p>我们还使用cookie来识别您的重复访问和偏好 至于衡量我们文档的有效性和用户是否 找出他们在寻找什么。只要你同意，你就是在帮我们 使我们的文档更好。</p>
+<input class="md-toggle" id="__settings" type="checkbox"/>
+<div class="md-consent__settings">
+<ul class="task-list">
+<li class="task-list-item">
+<label class="task-list-control">
+<input checked="" name="github" type="checkbox"/>
+<span class="task-list-indicator"></span>
+          GitHub
+        <label>
+</label></label></li>
+</ul>
+</div>
+<div class="md-consent__controls">
+<button class="md-button md-button--primary">同意</button>
+<label class="md-button" for="__settings">管理设定</label>
+</div>
+</form>
+</aside>
+</div>
+<script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.footer", "content.action.edit", "content.action.view", "content.code.copy", "content.code.annotate", "content.tooltips"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+<script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
+<script src="../../js/extra.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

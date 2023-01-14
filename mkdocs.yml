@@ -1,0 +1,242 @@
+# site_name, extra_css, extra_js, nav
+site_name: mkdocs-wiki
+extra_css:
+    - css/extra.css
+extra_javascript:
+    - js/extra.js
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+copyright: Copyright &copy; 2022 - 2023 travis
+repo_url: https://github.com/liangxiongsl/mkdocs-wiki
+repo_name: algo
+nav:
+    - 开始: main/开始.md
+    - 设置: main/设置.md
+    - 参考: main/参考.md
+    - 配置文件: main/配置文件.md
+    - 缩写: includes/abbr.md
+
+theme:
+    name: material
+    custom_dir: overrides
+
+    palette:
+        schema: slate
+        primary: indigo
+        accent: indigo
+    
+  
+    language: zh
+    direction: ltr
+  
+    # 网站顶部左侧的徽标
+    logo: https://pic.peo.pw/a/2023/01/12/63bfb934b1b06.png
+    icon:
+        logo: material/library
+        repo: fontawesome/brands/github
+        edit: material/pencil
+        view: material/eye
+        
+        admonition:
+            note: octicons/tag-16
+            abstract: octicons/checklist-16
+            info: octicons/info-16
+            tip: octicons/squirrel-16
+            success: octicons/check-16
+            question: octicons/question-16
+            warning: octicons/alert-16
+            failure: octicons/x-circle-16
+            danger: octicons/zap-16
+            bug: octicons/bug-16
+            example: octicons/beaker-16
+            quote: octicons/quote-16
+    # 网站图标
+    favicon: https://pic.peo.pw/a/2023/01/12/63bfb934b1b06.png
+    
+    # 特别有用
+    features:
+        - navigation.instant
+        - navigation.tracking
+        
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - navigation.sections
+        
+        - navigation.expand
+        #- navigation.prune
+        - navigation.indexes
+        
+        - toc.follow
+        #- toc.integrate
+        
+        - navigation.top
+        
+        - search.suggest
+        - search.highlight
+        - search.share
+        
+        - header.autohide
+        - navigation.footer
+        
+        
+        - content.action.edit
+        - content.action.view
+        
+        - content.code.copy
+        - content.code.annotate 
+        
+        - content.tooltips
+        
+        
+
+#markdown_extensions:
+
+extra:
+    alternate:
+        - name: English
+          link: /en/ 
+          lang: en
+        - name: Deutsch
+          link: /de/
+          lang: de
+    
+    homepage: /
+    
+    
+    consent:
+        title: 
+        description: >- 
+            我们还使用cookie来识别您的重复访问和偏好
+            至于衡量我们文档的有效性和用户是否
+            找出他们在寻找什么。只要你同意，你就是在帮我们
+            使我们的文档更好。
+    
+    version:
+        provider: mike
+    
+    social:
+        - icon: fontawesome/brands/docker
+          link: http://www.baidu.com
+          name: 指针
+        - icon: fontawesome/brands/facebook
+          link: http://www.baidu.com
+        - icon: fontawesome/brands/github
+          link: http://www.baidu.com
+        - icon: fontawesome/brands/instagram
+          link: http://www.baidu.com
+        - icon: fontawesome/brands/linkedin
+          link: http://www.baidu.com
+        - icon: fontawesome/brands/medium
+          link: http://www.baidu.com
+        - icon: fontawesome/brands/pied-piper-alt
+          link: http://www.baidu.com
+        - icon: fontawesome/brands/product-hunt
+          link: http://www.baidu.com
+        - icon: fontawesome/brands/slack
+          link: http://www.baidu.com
+        - icon: fontawesome/brands/twitter
+          link: http://www.baidu.com
+        - icon: fontawesome/brands/twitter
+          link: mailto:1506218507@qq.com
+          name: 给梁雄大人打邮箱
+    
+    generator: false
+    
+    
+plugins:
+    - search:
+        lang:
+            - en
+        jieba_dict: dict/dict.txt
+    
+    - git-revision-date-localized:
+        enable_creation_date: true
+        enabled: !ENV [CI, false]
+        type: date
+        enable_creation_date: true
+        fallback_to_build_date: true
+    
+    - git-committers:
+        enabled: !ENV [CI, false]
+        repository: liangxiongsl/algo-wiki
+        branch: main
+    
+    - glightbox
+    
+
+markdown_extensions:
+    - pymdownx.tabbed
+    - toc:
+        permalink: 👈👈👈
+        title: 完全是一个目录哦
+        permalink_title: Anchor link to this section for reference
+        
+        slugify: !!python/object/apply:pymdownx.slugs.slugify
+            kwds:
+              case: lower
+        toc_depth: 3
+    
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+    
+    - attr_list
+    - md_in_html
+    - pymdownx.superfences
+    
+    - pymdownx.highlight:
+        anchor_linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+    
+    # 图
+    - pymdownx.superfences:
+        custom_fences:
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:pymdownx.superfences.fence_code_format
+    
+    
+    # mathjax
+    - pymdownx.arithmatex:
+        generic: true
+    
+    - tables
+    
+    - pymdownx.superfences
+    - pymdownx.tabbed:
+        alternate_style: true 
+    
+    - footnotes
+    
+    - pymdownx.critic
+    - pymdownx.caret
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.tilde
+    
+    - attr_list
+    - md_in_html
+    
+    - attr_list
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+        
+    - attr_list
+    - md_in_html
+    
+    - def_list
+    - pymdownx.tasklist:
+        custom_checkbox: true
+        
+    - abbr
+    - attr_list
+    - pymdownx.snippets
+    
+    - pymdownx.snippets:
+        auto_append:
+            - includes/abbr.md
+    
