@@ -1,0 +1,3617 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../%E5%BC%80%E5%A7%8B/">
+      
+      
+        <link rel="next" href="../%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">
+      
+      
+      <link rel="icon" href="https://pic.peo.pw/a/2023/01/12/63bfb934b1b06.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+    
+    
+  
+      
+        <title>设置 - mkdocs-wiki</title>
+      
+    
+
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.732c4fb1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13.274 9.537v-.001l-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074ZM4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75Z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.499.75a.75.75 0 0 1 1.5 0v.996C5.9 2.903 6.793 3.65 7.662 4.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873 10.794-.045 12.622.26 14.408.558 16 1.94 16 4.25c0 1.278-.954 2.575-2.44 2.734l.146.508.065.22c.203.701.412 1.455.476 2.226.142 1.707-.4 3.03-1.487 3.898C11.714 14.671 10.27 15 8.75 15h-6a.75.75 0 0 1 0-1.5h1.376a4.484 4.484 0 0 1-.563-1.191 3.835 3.835 0 0 1-.05-2.063 4.647 4.647 0 0 1-2.025-.293.75.75 0 0 1 .525-1.406c1.357.507 2.376-.006 2.698-.318l.009-.01a.747.747 0 0 1 1.06 0 .748.748 0 0 1-.012 1.074c-.912.92-.992 1.835-.768 2.586.221.74.745 1.337 1.196 1.621H8.75c1.343 0 2.398-.296 3.074-.836.635-.507 1.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.425 2.425 0 0 1-.507-.441 3.075 3.075 0 0 1-.633-1.248.75.75 0 0 1 1.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738 0 1.25-.615 1.25-1.25 0-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706 1.345-.46.92-.27 1.774.019 3.062l.042.19a.884.884 0 0 1 .01.05c.348.443.666.949.94 1.553a.75.75 0 1 1-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7 5.527c-.814-.68-1.75-1.462-2.692-2.619a3.737 3.737 0 0 0-1.023.88c-.406.495-.663 1.036-.722 1.508.116.122.306.21.591.239.388.038.797-.06 1.032-.19a.75.75 0 0 1 .728 1.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75 5.677V5.5c0-.984.48-1.94 1.077-2.664.46-.559 1.05-1.055 1.673-1.353V.75Z"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.756 2.756 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6.24 6.24 0 0 0-.26.16.952.952 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661.103-.067.207-.132.313-.195l.007-.004c.1-.061.182-.11.258-.161a.969.969 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.612.612 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1.01 1.01 0 0 0-.34.398ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.344 2.343h-.001a8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746Zm1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275ZM6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L6.94 8 4.97 6.03a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018Z"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.249 1.249 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004L9.503.429Zm1.047 1.074L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006a.036.036 0 0 0-.004-.009l-.006-.006-.008-.001c-.003 0-.006.002-.009.004Z"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.72.22a.75.75 0 0 1 1.06 0l1 .999a3.488 3.488 0 0 1 2.441 0l.999-1a.748.748 0 0 1 1.265.332.75.75 0 0 1-.205.729l-.775.776c.616.63.995 1.493.995 2.444v.327c0 .1-.009.197-.025.292.408.14.764.392 1.029.722l1.968-.787a.75.75 0 0 1 .556 1.392L13 7.258V9h2.25a.75.75 0 0 1 0 1.5H13v.5c0 .409-.049.806-.141 1.186l2.17.868a.75.75 0 0 1-.557 1.392l-2.184-.873A4.997 4.997 0 0 1 8 16a4.997 4.997 0 0 1-4.288-2.427l-2.183.873a.75.75 0 0 1-.558-1.392l2.17-.868A5.036 5.036 0 0 1 3 11v-.5H.75a.75.75 0 0 1 0-1.5H3V7.258L.971 6.446a.75.75 0 0 1 .558-1.392l1.967.787c.265-.33.62-.583 1.03-.722a1.677 1.677 0 0 1-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72 1.28a.75.75 0 0 1 0-1.06Zm.53 6.28a.75.75 0 0 0-.75.75V11a3.5 3.5 0 1 0 7 0V7.25a.75.75 0 0 0-.75-.75ZM6.173 5h3.654A.172.172 0 0 0 10 4.827V4.5a2 2 0 1 0-4 0v.327c0 .096.077.173.173.173Z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 2.5h10.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Zm4 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5ZM2.5 7.75v6a.75.75 0 0 1-1.5 0v-6a.75.75 0 0 1 1.5 0Z"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#添加cssjs" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+  <!-- Add announcement here, including arbitrary HTML -->
+  <h1>公告(常见bug -> 导致服务崩掉)</h1>
+  <p>1. mkdocs.yml语法错误</p>
+  <p>2. 内容选项卡的名字为空</p>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../mkdocs-wiki/" title="mkdocs-wiki" class="md-header__button md-logo" aria-label="mkdocs-wiki" data-md-component="logo">
+      
+  <img src="https://pic.peo.pw/a/2023/01/12/63bfb934b1b06.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            mkdocs-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              设置
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/de/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/liangxiongsl/mkdocs-wiki" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    algo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../%E5%BC%80%E5%A7%8B/" class="md-tabs__link">
+        
+  
+    
+  
+  开始
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  设置
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../参考.md" class="md-tabs__link">
+        
+  
+    
+  
+  参考
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" class="md-tabs__link">
+        
+  
+    
+  
+  配置文件
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../includes/abbr/" class="md-tabs__link">
+        
+  
+    
+  
+  缩写
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../mkdocs-wiki/" title="mkdocs-wiki" class="md-nav__button md-logo" aria-label="mkdocs-wiki" data-md-component="logo">
+      
+  <img src="https://pic.peo.pw/a/2023/01/12/63bfb934b1b06.png" alt="logo">
+
+    </a>
+    mkdocs-wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/liangxiongsl/mkdocs-wiki" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    algo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%BC%80%E5%A7%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    开始
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    设置
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    设置
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="完全是一个目录哦">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      完全是一个目录哦
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#添加cssjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      添加css/js
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#主题拓展---更改html源代码" class="md-nav__link">
+    <span class="md-ellipsis">
+      主题拓展 - 更改HTML源代码
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#一颜色" class="md-nav__link">
+    <span class="md-ellipsis">
+      一.颜色
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一.颜色">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#调色板" class="md-nav__link">
+    <span class="md-ellipsis">
+      调色板
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#调色板切换" class="md-nav__link">
+    <span class="md-ellipsis">
+      调色板切换
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#系统首选项" class="md-nav__link">
+    <span class="md-ellipsis">
+      系统首选项
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2定制" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.定制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.定制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#自定义配色" class="md-nav__link">
+    <span class="md-ellipsis">
+      自定义配色
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#二字体" class="md-nav__link">
+    <span class="md-ellipsis">
+      二.字体
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二.字体">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1配置_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#常规字体" class="md-nav__link">
+    <span class="md-ellipsis">
+      常规字体
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#等宽字体" class="md-nav__link">
+    <span class="md-ellipsis">
+      等宽字体
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#自动加载" class="md-nav__link">
+    <span class="md-ellipsis">
+      自动加载
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2定制_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.定制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.定制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#其他字体" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他字体
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#三语言" class="md-nav__link">
+    <span class="md-ellipsis">
+      三.语言
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三.语言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1配置_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#站点语言" class="md-nav__link">
+    <span class="md-ellipsis">
+      站点语言
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#网站语言选择器" class="md-nav__link">
+    <span class="md-ellipsis">
+      网站语言选择器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#方向性" class="md-nav__link">
+    <span class="md-ellipsis">
+      方向性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2定制_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.定制
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#四徽标图标" class="md-nav__link">
+    <span class="md-ellipsis">
+      四.徽标/图标
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四.徽标/图标">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1配置_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#商标" class="md-nav__link">
+    <span class="md-ellipsis">
+      商标
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#网站图标" class="md-nav__link">
+    <span class="md-ellipsis">
+      网站图标
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2定制_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.定制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.定制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#其他图标" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他图标
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#五数据隐私待补" class="md-nav__link">
+    <span class="md-ellipsis">
+      五.数据隐私(待补)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五.数据隐私(待补)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1cookie同意" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.cookie同意
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.cookie同意">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#六导航" class="md-nav__link">
+    <span class="md-ellipsis">
+      六.导航
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六.导航">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1配置_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#即时加载" class="md-nav__link">
+    <span class="md-ellipsis">
+      即时加载
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#锚点跟踪" class="md-nav__link">
+    <span class="md-ellipsis">
+      锚点跟踪
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#导航选项卡tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      导航选项卡tabs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#导航sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      导航sections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#导航扩展" class="md-nav__link">
+    <span class="md-ellipsis">
+      导航扩展
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#导航修剪" class="md-nav__link">
+    <span class="md-ellipsis">
+      导航修剪
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#节索引页" class="md-nav__link">
+    <span class="md-ellipsis">
+      节索引页
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#目录" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#返回顶部按钮" class="md-nav__link">
+    <span class="md-ellipsis">
+      返回顶部按钮
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2用法" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.用法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3定制" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.定制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.定制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#键盘快捷键" class="md-nav__link">
+    <span class="md-ellipsis">
+      键盘快捷键
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#内容区域宽度" class="md-nav__link">
+    <span class="md-ellipsis">
+      内容区域宽度
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#七搜索" class="md-nav__link">
+    <span class="md-ellipsis">
+      七,搜索
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="七,搜索">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#配置_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#搜索建议" class="md-nav__link">
+    <span class="md-ellipsis">
+      搜索建议
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#搜索突出显示" class="md-nav__link">
+    <span class="md-ellipsis">
+      搜索突出显示
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#搜索共享" class="md-nav__link">
+    <span class="md-ellipsis">
+      搜索共享
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2用法_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.用法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.用法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#搜索boosting" class="md-nav__link">
+    <span class="md-ellipsis">
+      搜索boosting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#搜索排除" class="md-nav__link">
+    <span class="md-ellipsis">
+      搜索排除
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#八站点分析略" class="md-nav__link">
+    <span class="md-ellipsis">
+      八.站点分析(略)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#九社交卡略" class="md-nav__link">
+    <span class="md-ellipsis">
+      九.社交卡(略)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#十博客" class="md-nav__link">
+    <span class="md-ellipsis">
+      十.博客
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#十一标签" class="md-nav__link">
+    <span class="md-ellipsis">
+      十一.标签
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十一.标签">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1配置_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#内置标签插件" class="md-nav__link">
+    <span class="md-ellipsis">
+      内置标签插件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#十二版本控制" class="md-nav__link">
+    <span class="md-ellipsis">
+      十二.版本控制
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#十三标头标题栏" class="md-nav__link">
+    <span class="md-ellipsis">
+      十三.标头(标题栏)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十三.标头(标题栏)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#配置_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#自动隐藏" class="md-nav__link">
+    <span class="md-ellipsis">
+      自动隐藏
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#公告栏" class="md-nav__link">
+    <span class="md-ellipsis">
+      公告栏
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#十四页脚" class="md-nav__link">
+    <span class="md-ellipsis">
+      十四.页脚
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十四.页脚">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1配置_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#导航" class="md-nav__link">
+    <span class="md-ellipsis">
+      导航
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#社交链接" class="md-nav__link">
+    <span class="md-ellipsis">
+      社交链接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#版权声明" class="md-nav__link">
+    <span class="md-ellipsis">
+      版权声明
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#生成通知" class="md-nav__link">
+    <span class="md-ellipsis">
+      生成通知
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2用法_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.用法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.用法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#隐藏部分页脚" class="md-nav__link">
+    <span class="md-ellipsis">
+      隐藏部分页脚
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3定制_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.定制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.定制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#自定义版权略" class="md-nav__link">
+    <span class="md-ellipsis">
+      自定义版权(略)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#十五git存储库" class="md-nav__link">
+    <span class="md-ellipsis">
+      十五.git存储库
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十五.git存储库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#配置_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#存储库" class="md-nav__link">
+    <span class="md-ellipsis">
+      存储库
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#修订" class="md-nav__link">
+    <span class="md-ellipsis">
+      修订
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#十六注释系统略" class="md-nav__link">
+    <span class="md-ellipsis">
+      十六.注释系统（略）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#十七扩展python-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      十七.扩展——python markdown
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十七.扩展——python markdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1支持的扩展" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.支持的扩展
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.支持的扩展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#缩写" class="md-nav__link">
+    <span class="md-ellipsis">
+      缩写
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#告诫" class="md-nav__link">
+    <span class="md-ellipsis">
+      告诫
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#属性列表" class="md-nav__link">
+    <span class="md-ellipsis">
+      属性列表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#定义列表" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义列表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#脚注" class="md-nav__link">
+    <span class="md-ellipsis">
+      脚注
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#markdown-in-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      markdown in HTML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#目录_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#表" class="md-nav__link">
+    <span class="md-ellipsis">
+      表
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2被取代的扩展略" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.被取代的扩展(略)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#十八扩展python-markdown-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      十八.扩展——python markdown extensions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十八.扩展——python markdown extensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#支持的扩展" class="md-nav__link">
+    <span class="md-ellipsis">
+      支持的扩展
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="支持的扩展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#算术" class="md-nav__link">
+    <span class="md-ellipsis">
+      算术
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../参考.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    配置文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../includes/abbr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    缩写
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="完全是一个目录哦">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      完全是一个目录哦
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#添加cssjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      添加css/js
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#主题拓展---更改html源代码" class="md-nav__link">
+    <span class="md-ellipsis">
+      主题拓展 - 更改HTML源代码
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#一颜色" class="md-nav__link">
+    <span class="md-ellipsis">
+      一.颜色
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一.颜色">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#调色板" class="md-nav__link">
+    <span class="md-ellipsis">
+      调色板
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#调色板切换" class="md-nav__link">
+    <span class="md-ellipsis">
+      调色板切换
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#系统首选项" class="md-nav__link">
+    <span class="md-ellipsis">
+      系统首选项
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2定制" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.定制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.定制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#自定义配色" class="md-nav__link">
+    <span class="md-ellipsis">
+      自定义配色
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#二字体" class="md-nav__link">
+    <span class="md-ellipsis">
+      二.字体
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二.字体">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1配置_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#常规字体" class="md-nav__link">
+    <span class="md-ellipsis">
+      常规字体
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#等宽字体" class="md-nav__link">
+    <span class="md-ellipsis">
+      等宽字体
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#自动加载" class="md-nav__link">
+    <span class="md-ellipsis">
+      自动加载
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2定制_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.定制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.定制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#其他字体" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他字体
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#三语言" class="md-nav__link">
+    <span class="md-ellipsis">
+      三.语言
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三.语言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1配置_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#站点语言" class="md-nav__link">
+    <span class="md-ellipsis">
+      站点语言
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#网站语言选择器" class="md-nav__link">
+    <span class="md-ellipsis">
+      网站语言选择器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#方向性" class="md-nav__link">
+    <span class="md-ellipsis">
+      方向性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2定制_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.定制
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#四徽标图标" class="md-nav__link">
+    <span class="md-ellipsis">
+      四.徽标/图标
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四.徽标/图标">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1配置_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#商标" class="md-nav__link">
+    <span class="md-ellipsis">
+      商标
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#网站图标" class="md-nav__link">
+    <span class="md-ellipsis">
+      网站图标
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2定制_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.定制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.定制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#其他图标" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他图标
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#五数据隐私待补" class="md-nav__link">
+    <span class="md-ellipsis">
+      五.数据隐私(待补)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五.数据隐私(待补)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1cookie同意" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.cookie同意
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.cookie同意">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#六导航" class="md-nav__link">
+    <span class="md-ellipsis">
+      六.导航
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六.导航">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1配置_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#即时加载" class="md-nav__link">
+    <span class="md-ellipsis">
+      即时加载
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#锚点跟踪" class="md-nav__link">
+    <span class="md-ellipsis">
+      锚点跟踪
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#导航选项卡tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      导航选项卡tabs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#导航sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      导航sections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#导航扩展" class="md-nav__link">
+    <span class="md-ellipsis">
+      导航扩展
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#导航修剪" class="md-nav__link">
+    <span class="md-ellipsis">
+      导航修剪
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#节索引页" class="md-nav__link">
+    <span class="md-ellipsis">
+      节索引页
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#目录" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#返回顶部按钮" class="md-nav__link">
+    <span class="md-ellipsis">
+      返回顶部按钮
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2用法" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.用法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3定制" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.定制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.定制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#键盘快捷键" class="md-nav__link">
+    <span class="md-ellipsis">
+      键盘快捷键
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#内容区域宽度" class="md-nav__link">
+    <span class="md-ellipsis">
+      内容区域宽度
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#七搜索" class="md-nav__link">
+    <span class="md-ellipsis">
+      七,搜索
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="七,搜索">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#配置_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#搜索建议" class="md-nav__link">
+    <span class="md-ellipsis">
+      搜索建议
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#搜索突出显示" class="md-nav__link">
+    <span class="md-ellipsis">
+      搜索突出显示
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#搜索共享" class="md-nav__link">
+    <span class="md-ellipsis">
+      搜索共享
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2用法_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.用法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.用法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#搜索boosting" class="md-nav__link">
+    <span class="md-ellipsis">
+      搜索boosting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#搜索排除" class="md-nav__link">
+    <span class="md-ellipsis">
+      搜索排除
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#八站点分析略" class="md-nav__link">
+    <span class="md-ellipsis">
+      八.站点分析(略)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#九社交卡略" class="md-nav__link">
+    <span class="md-ellipsis">
+      九.社交卡(略)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#十博客" class="md-nav__link">
+    <span class="md-ellipsis">
+      十.博客
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#十一标签" class="md-nav__link">
+    <span class="md-ellipsis">
+      十一.标签
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十一.标签">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1配置_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#内置标签插件" class="md-nav__link">
+    <span class="md-ellipsis">
+      内置标签插件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#十二版本控制" class="md-nav__link">
+    <span class="md-ellipsis">
+      十二.版本控制
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#十三标头标题栏" class="md-nav__link">
+    <span class="md-ellipsis">
+      十三.标头(标题栏)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十三.标头(标题栏)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#配置_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#自动隐藏" class="md-nav__link">
+    <span class="md-ellipsis">
+      自动隐藏
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#公告栏" class="md-nav__link">
+    <span class="md-ellipsis">
+      公告栏
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#十四页脚" class="md-nav__link">
+    <span class="md-ellipsis">
+      十四.页脚
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十四.页脚">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1配置_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#导航" class="md-nav__link">
+    <span class="md-ellipsis">
+      导航
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#社交链接" class="md-nav__link">
+    <span class="md-ellipsis">
+      社交链接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#版权声明" class="md-nav__link">
+    <span class="md-ellipsis">
+      版权声明
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#生成通知" class="md-nav__link">
+    <span class="md-ellipsis">
+      生成通知
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2用法_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.用法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.用法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#隐藏部分页脚" class="md-nav__link">
+    <span class="md-ellipsis">
+      隐藏部分页脚
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3定制_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.定制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.定制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#自定义版权略" class="md-nav__link">
+    <span class="md-ellipsis">
+      自定义版权(略)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#十五git存储库" class="md-nav__link">
+    <span class="md-ellipsis">
+      十五.git存储库
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十五.git存储库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#配置_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#存储库" class="md-nav__link">
+    <span class="md-ellipsis">
+      存储库
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#修订" class="md-nav__link">
+    <span class="md-ellipsis">
+      修订
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#十六注释系统略" class="md-nav__link">
+    <span class="md-ellipsis">
+      十六.注释系统（略）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#十七扩展python-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      十七.扩展——python markdown
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十七.扩展——python markdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1支持的扩展" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.支持的扩展
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.支持的扩展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#缩写" class="md-nav__link">
+    <span class="md-ellipsis">
+      缩写
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#告诫" class="md-nav__link">
+    <span class="md-ellipsis">
+      告诫
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#属性列表" class="md-nav__link">
+    <span class="md-ellipsis">
+      属性列表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#定义列表" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义列表
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#脚注" class="md-nav__link">
+    <span class="md-ellipsis">
+      脚注
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#markdown-in-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      markdown in HTML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#目录_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      目录
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#表" class="md-nav__link">
+    <span class="md-ellipsis">
+      表
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2被取代的扩展略" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.被取代的扩展(略)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#十八扩展python-markdown-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      十八.扩展——python markdown extensions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十八.扩展——python markdown extensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#支持的扩展" class="md-nav__link">
+    <span class="md-ellipsis">
+      支持的扩展
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="支持的扩展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#算术" class="md-nav__link">
+    <span class="md-ellipsis">
+      算术
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/liangxiongsl/mkdocs-wiki/edit/master/docs/main/设置.md" title="编辑此页" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/liangxiongsl/mkdocs-wiki/raw/master/docs/main/设置.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
+    </a>
+  
+
+
+<p><button class="modeBtn">🌞</button></p>
+<p>mkdocs.yaml:</p>
+<h3 id="添加cssjs">添加css/js<a class="headerlink" href="#添加cssjs" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code>extra_css:
+    - ../XXX.css
+extra_javascript:
+    - ../XXX.js
+</code></pre></div>
+<p><a class="glightbox" href="https://1drv.ms/u/s!AswiSqnY8NTmqB1MS6VwS9FR98bh" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="无法显示" src="https://1drv.ms/u/s!AswiSqnY8NTmqB1MS6VwS9FR98bh" /></a>
+<a class="glightbox" href="https://ibb.co/ngf9Svj" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://ibb.co/ngf9Svj" /></a></p>
+<h3 id="主题拓展---更改html源代码">主题拓展 - 更改HTML源代码<a class="headerlink" href="#主题拓展---更改html源代码" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code>theme:
+  name: material
+  custom_dir: overrides
+</code></pre></div>
+<h1 id="一颜色">一.颜色<a class="headerlink" href="#一颜色" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置">1.配置<a class="headerlink" href="#1配置" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="调色板">调色板<a class="headerlink" href="#调色板" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<h4 id="配色">配色<a class="headerlink" href="#配色" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<div class="highlight"><pre><span></span><code>theme.palette.schema - default | slate
+</code></pre></div>
+<p>（浅色 | 深色）</p>
+<h4 id="原色">原色<a class="headerlink" href="#原色" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<p>原色用于标题、侧边栏、文本链接和其他几个组件</p>
+<div class="highlight"><pre><span></span><code>theme.palette.primary - indigo(默认)
+</code></pre></div>
+<h4 id="强调文字颜色">强调文字颜色<a class="headerlink" href="#强调文字颜色" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<div class="highlight"><pre><span></span><code>theme.palette.accent - indigo
+</code></pre></div>
+<h3 id="调色板切换">调色板切换<a class="headerlink" href="#调色板切换" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>// 不可行
+theme:
+  palette: </p>
+<div class="highlight"><pre><span></span><code># Palette toggle for light mode
+- scheme: default
+  toggle:
+    icon: material/brightness-7 
+    name: Switch to dark mode
+
+# Palette toggle for dark mode
+- scheme: slate
+  toggle:
+    icon: material/brightness-4
+    name: Switch to light mode
+</code></pre></div>
+<p><a href="https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle">参考</a></p>
+<h3 id="系统首选项">系统首选项<a class="headerlink" href="#系统首选项" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<h4 id="自动亮暗模式">自动亮/暗模式<a class="headerlink" href="#自动亮暗模式" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<p>// 白天和夜间自动切换明暗外观
+theme:
+  palette:</p>
+<div class="highlight"><pre><span></span><code># Palette toggle for automatic mode
+- media: &quot;(prefers-color-scheme)&quot;
+  toggle:
+    icon: material/brightness-auto
+    name: Switch to light mode
+
+# Palette toggle for light mode
+- media: &quot;(prefers-color-scheme: light)&quot;
+  scheme: default 
+  toggle:
+    icon: material/brightness-7
+    name: Switch to dark mode
+
+# Palette toggle for dark mode
+- media: &quot;(prefers-color-scheme: dark)&quot;
+  scheme: slate
+  toggle:
+    icon: material/brightness-4
+    name: Switch to system preference
+</code></pre></div>
+<h2 id="2定制">2.定制<a class="headerlink" href="#2定制" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="自定义配色">自定义配色<a class="headerlink" href="#自定义配色" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>文件 docs/stylesheets/extra.css:
+[data-md-color-scheme="配色标识"] {
+  --md-primary-fg-color:        cyan;
+  --md-primary-fg-color--light: cyan;
+  --md-primary-fg-color--dark:  cyan;
+}
+文件 mkdocs.yml:
+theme.palette.scheme - 配色标识
+extra_css - [stylesheets/extra.css]</p>
+<h1 id="二字体">二.字体<a class="headerlink" href="#二字体" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_1">1.配置<a class="headerlink" href="#1配置_1" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="常规字体">常规字体<a class="headerlink" href="#常规字体" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>用于所有正文副本、标题以及基本上不需要等宽的所有内容
+// 可设置任何<a href="https://fonts.google.com/?subset=chinese-simplified&amp;noto.script=Hans">谷歌字体</a></p>
+<div class="highlight"><pre><span></span><code>theme.font.text : Roboto
+</code></pre></div>
+<p>// 字体将以 300、400、400i 和 700 加载</p>
+<h3 id="等宽字体">等宽字体<a class="headerlink" href="#等宽字体" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>用于代码块，可以单独配置</p>
+<div class="highlight"><pre><span></span><code>theme.font.code : Roboto Mono
+</code></pre></div>
+<p>// 字体将以 400 格式加载</p>
+<h3 id="自动加载">自动加载<a class="headerlink" href="#自动加载" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>防止从 Google 字体加载字体</p>
+<div class="highlight"><pre><span></span><code>theme.font : false
+</code></pre></div>
+<h2 id="2定制_1">2.定制<a class="headerlink" href="#2定制_1" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="其他字体">其他字体<a class="headerlink" href="#其他字体" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<h4 id="从另一个目标加载附加字体或覆盖系统字体">从另一个目标加载（附加）字体或覆盖系统字体<a class="headerlink" href="#从另一个目标加载附加字体或覆盖系统字体" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<p>文件 docs/stylesheets/extra.css:
+    @font-face {
+      font-family: "<font>";
+      src: "...";
+    }
+文件 mkdocs.yml:
+    extra_css - [stylesheets/extra.css]</p>
+<h4 id="将该字体应用于特定元素">将该字体应用于特定元素<a class="headerlink" href="#将该字体应用于特定元素" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<div class="highlight"><pre><span></span><code>常规字体
+:root {
+  --md-text-font: &quot;&lt;font&gt;&quot;; 
+}
+等宽字体：
+:root {
+  --md-code-font: &quot;&lt;font&gt;&quot;;
+}
+</code></pre></div>
+<h1 id="三语言">三.语言<a class="headerlink" href="#三语言" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_2">1.配置<a class="headerlink" href="#1配置_2" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="站点语言">站点语言<a class="headerlink" href="#站点语言" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code>theme.language : en | zh | ...
+</code></pre></div>
+<h3 id="网站语言选择器">网站语言选择器<a class="headerlink" href="#网站语言选择器" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>如果您的文档有多种语言版本，则可以将指向这些语言的语言选择器添加到标题中。可以通过 定义备用语言</p>
+<div class="highlight"><pre><span></span><code>extra:
+  alternate:
+    # 此属性值在语言选择器内用作语言名称
+    - name: English
+    # 此属性必须设置为绝对链接
+      link: /en/ 
+    # 此属性必须包含 ISO 639-1 语言代码
+      lang: en
+    - name: Deutsch
+      link: /de/
+      lang: de
+</code></pre></div>
+<h3 id="方向性">方向性<a class="headerlink" href="#方向性" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>即显示内容的方向：从左到右ltr(默认) 或 从右到左rtl</p>
+<div class="highlight"><pre><span></span><code>theme.direction : ltr | rtl
+</code></pre></div>
+<h2 id="2定制_2">2.定制<a class="headerlink" href="#2定制_2" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<p><a href="https://squidfunk.github.io/mkdocs-material/customization/#setup-and-theme-structure">参照主题扩展指南</a>
+overrides/partials/languages/custom.html:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;!-- Import translations for language and fallback --&gt;
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>{% import &quot;partials/languages/de.html&quot; as language %}
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>{% import &quot;partials/languages/en.html&quot; as fallback %} 
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>&lt;!-- Define custom translations --&gt;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>{% macro override(key) %}{{ {
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  &quot;source.file.date.created&quot;: &quot;Erstellt am&quot;, 
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  &quot;source.file.date.updated&quot;: &quot;Aktualisiert am&quot;
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>}[key] }}{% endmacro %}
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>&lt;!-- Re-export translations --&gt;
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>{% macro t(key) %}{{
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  override(key) or language.t(key) or fallback.t(key)
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>}}{% endmacro %}
+</code></pre></div>
+mkdocs.yml
+theme.language : custom</p>
+<h1 id="四徽标图标">四.徽标/图标<a class="headerlink" href="#四徽标图标" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_3">1.配置<a class="headerlink" href="#1配置_3" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="商标">商标<a class="headerlink" href="#商标" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>图像:</p>
+<div class="highlight"><pre><span></span><code>theme.logo : 图像url
+</code></pre></div>
+<p>图标/捆绑：</p>
+<div class="highlight"><pre><span></span><code>theme.icon.logo : material/library
+</code></pre></div>
+<p>设置点击徽标跳转的网页：</p>
+<div class="highlight"><pre><span></span><code>extra.homepage : https://example.com
+</code></pre></div>
+<h3 id="网站图标">网站图标<a class="headerlink" href="#网站图标" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code>theme.favicon : 图像url
+</code></pre></div>
+<h2 id="2定制_3">2.定制<a class="headerlink" href="#2定制_3" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="其他图标"><a href="https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#using-icons">其他图标</a><a class="headerlink" href="#其他图标" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<h1 id="五数据隐私待补">五.数据隐私(待补)<a class="headerlink" href="#五数据隐私待补" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1cookie同意">1.cookie同意<a class="headerlink" href="#1cookie同意" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="配置">配置<a class="headerlink" href="#配置" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>extra.consent.title : &quot;Cookie同意&quot; 的标题
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a># &quot;cookie同意&quot;的说明
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>extra.consent.description: &gt;-
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    # 多行文本
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    XXX
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    XXX
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>extra.consent.cookies.analytics : 
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a> github
+</code></pre></div>
+....</p>
+<h1 id="六导航">六.导航<a class="headerlink" href="#六导航" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_4">1.配置<a class="headerlink" href="#1配置_4" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="即时加载">即时加载<a class="headerlink" href="#即时加载" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>启用即时加载后，所有内部链接的点击将被拦截并通过 XHR 调度，而无需完全重新加载页面</p>
+<div class="highlight"><pre><span></span><code>theme.features : - navigation.instant
+</code></pre></div>
+<p>// 对大型文档网站特别有用</p>
+<h3 id="锚点跟踪">锚点跟踪<a class="headerlink" href="#锚点跟踪" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>启用定位点跟踪后，地址栏中的 URL 将使用内容列表中突出显示的活动定位点自动更新</p>
+<div class="highlight"><pre><span></span><code>theme.features : - navigation.tracking
+</code></pre></div>
+<h3 id="导航选项卡tabs">导航选项卡tabs<a class="headerlink" href="#导航选项卡tabs" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>启用选项卡后，顶级部分将呈现在上方视口标题下方的菜单层中，但在移动设备上保持原样</p>
+<p>// 本质原理就是将nav分层(将一级标题至于顶部导航栏)</p>
+<div class="highlight"><pre><span></span><code>theme.features : - navigation.tabs
+</code></pre></div>
+<h4 id="粘性选项卡">粘性选项卡<a class="headerlink" href="#粘性选项卡" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<p>启用粘滞选项卡后，导航选项卡将锁定在标题下方，并在向下滚动时始终保持可见</p>
+<div class="highlight"><pre><span></span><code>theme.features : - navigation.tabs.sticky
+</code></pre></div>
+<h3 id="导航sections">导航sections<a class="headerlink" href="#导航sections" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>启用部分后，顶级部分将在侧边栏中呈现为上方视口的组，但在移动设备上保持原样</p>
+<p>// 直观上来讲，就是nav中的三级标题在导航中不缩进，而二级标题通过加粗来表示他们的父子关系</p>
+<p>// 这样可以为更多级标题留空</p>
+<div class="highlight"><pre><span></span><code>theme.features : - navigation.sections
+</code></pre></div>
+<h3 id="导航扩展">导航扩展<a class="headerlink" href="#导航扩展" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>启用扩展后，默认情况下，左侧边栏将展开所有可折叠的子部分</p>
+<div class="highlight"><pre><span></span><code>theme.features : - navigation.expand
+</code></pre></div>
+<h3 id="导航修剪">导航修剪<a class="headerlink" href="#导航修剪" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>启用修剪后，呈现的 HTML 中仅包含可见的导航项，从而将构建网站的大小减少 33% 或更多</p>
+<p>// <a href="https://squidfunk.github.io/mkdocs-material/insiders/">仅限赞助商</a></p>
+<div class="highlight"><pre><span></span><code>theme.features : - navigation.prune
+</code></pre></div>
+<h3 id="节索引页">节索引页<a class="headerlink" href="#节索引页" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>启用章节索引页后，文档可以直接附加到章节，这对于提供概览页面特别有用</p>
+<p>// 也就是nav中设置的"文档树"中的次叶子结点的最前的文档合并到该 此叶子结点中</p>
+<div class="highlight"><pre><span></span><code>theme.features : - navigation.indexes
+</code></pre></div>
+<h3 id="目录">目录<a class="headerlink" href="#目录" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<h4 id="锚点跟随">锚点跟随<a class="headerlink" href="#锚点跟随" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<p>启用目录的锚点跟随后，侧边栏会自动滚动，以便活动锚点始终可见</p>
+<div class="highlight"><pre><span></span><code>theme.features : - toc.follow
+</code></pre></div>
+<h4 id="导航集成">导航集成<a class="headerlink" href="#导航集成" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<p>启用目录的导航集成后，它始终呈现为左侧导航边栏的一部分</p>
+<div class="highlight"><pre><span></span><code>theme.features : - toc.integrate
+</code></pre></div>
+<h3 id="返回顶部按钮">返回顶部按钮<a class="headerlink" href="#返回顶部按钮" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>当用户向下滚动后再次开始向上滚动时，可以显示返回顶部按钮。它居中呈现，正好在标题下方。</p>
+<div class="highlight"><pre><span></span><code>theme.features : - navigation.top
+</code></pre></div>
+<h2 id="2用法">2.用法<a class="headerlink" href="#2用法" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<p>对于具有前言属性的文档，可以隐藏导航和/或目录侧边栏
+在 Markdown 文件的顶部添加以下行:</p>
+<div class="highlight"><pre><span></span><code>---
+hide:
+  - navigation  # 隐藏右边的目录侧边栏
+  - toc         # 隐藏左边的导航栏
+---
+</code></pre></div>
+<h2 id="3定制">3.定制<a class="headerlink" href="#3定制" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="键盘快捷键">键盘快捷键<a class="headerlink" href="#键盘快捷键" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<h4 id="内置快捷键">内置快捷键<a class="headerlink" href="#内置快捷键" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<p>mkdocs有两种模式: search, global</p>
+<p>search(搜索模式): </p>
+<div class="highlight"><pre><span></span><code>down | up -&gt; 选择下一个/上一个结果
+esc | tab -&gt; 退出搜索框
+enter -&gt; 搜索
+</code></pre></div>
+<p>global(全局模式):</p>
+<div class="highlight"><pre><span></span><code>f | s | / -&gt; 打开搜索框
+p | , -&gt; 转到上一页
+n | . -&gt; 转到下一页
+</code></pre></div>
+<h4 id="自定义快捷键">自定义快捷键<a class="headerlink" href="#自定义快捷键" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<p>就是从js中绑定事件
+docs/javascripts/shortcuts.js:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>keyboard$.subscribe(function(key) {
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  if (key.mode === &quot;global&quot; &amp;&amp; key.type === &quot;x&quot;) {
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    /* Add custom keyboard handler here */
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    key.claim() 
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  }
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>})
+</code></pre></div>
+<p>mkdocs.yml:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>extra_javascript:
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  - javascripts/shortcuts.js
+</code></pre></div></p>
+<h3 id="内容区域宽度">内容区域宽度<a class="headerlink" href="#内容区域宽度" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>也是通过css实现, 如:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.</span><span class="nc">md-grid</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">1440</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="c">/** max-width: calc(80%); **/</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
+</code></pre></div></p>
+<h2 id="七搜索">七,搜索<a class="headerlink" href="#七搜索" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="配置_1">配置<a class="headerlink" href="#配置_1" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<h4 id="内置搜索插件">内置搜索插件<a class="headerlink" href="#内置搜索插件" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<p>// 支持一种搜索语言</p>
+<div class="highlight"><pre><span></span><code>plugins.-search.lang : en
+</code></pre></div>
+<p>// 支持多种搜索语言</p>
+<div class="highlight"><pre><span></span><code>plugins.-search.lang:
+    - en
+    - ja
+</code></pre></div>
+<p>// 自定义用于索引和查询标记化的分隔符，从而可以索引由空格以外的其他字符分隔的单词部分(取值为正则表达式)</p>
+<div class="highlight"><pre><span></span><code>plugins.-search.separator : 
+# 比如: `[\s\-\.]+`  -&gt;  不小于1个 空格 或 - 或 . 组成的字符串
+# 又如: `[\s\-,:!=\[\]]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&amp;[lg]t;`
+</code></pre></div>
+<h5 id="中文支持">中文支持<a class="headerlink" href="#中文支持" title="Anchor link to this section for reference">👈👈👈</a></h5>
+<p>安装<a href="https://pypi.org/project/jieba/">jieba</a></p>
+<div class="highlight"><pre><span></span><code>pip install jieba
+</code></pre></div>
+<p>指定 jieba 用于分割文本的自定义词典，<a href="https://github.com/fxsjy/jieba#%E5%85%B6%E4%BB%96%E8%AF%8D%E5%85%B8">替换默认词典</a></p>
+<div class="highlight"><pre><span></span><code>plugins.-search.jieba_dict : dict.txt
+</code></pre></div>
+<p>指定 jieba 用于分割文本的其他用户词典，从而<a href="https://github.com/fxsjy/jieba#%E8%BD%BD%E5%85%A5%E8%AF%8D%E5%85%B8">扩充默认词典</a></p>
+<div class="highlight"><pre><span></span><code>plugins.-search.jieba_dict_user : user_dict.txt
+</code></pre></div>
+<h3 id="搜索建议">搜索建议<a class="headerlink" href="#搜索建议" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>启用后打开搜索框搜索，按下 右键 即可补全搜索建议</p>
+<div class="highlight"><pre><span></span><code>theme.features : - search.suggest
+</code></pre></div>
+<h3 id="搜索突出显示">搜索突出显示<a class="headerlink" href="#搜索突出显示" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>启用后点击匹配到的链接，新页面中被匹配到的字符串均会高亮显示</p>
+<div class="highlight"><pre><span></span><code>theme.features : - search.highlight
+</code></pre></div>
+<h3 id="搜索共享">搜索共享<a class="headerlink" href="#搜索共享" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>激活搜索共享后，重置按钮旁边会显示一个共享按钮，该按钮允许深层链接到当前搜索查询和结果</p>
+<div class="highlight"><pre><span></span><code>theme.features : - search.share
+</code></pre></div>
+<h2 id="2用法_1">2.用法<a class="headerlink" href="#2用法_1" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="搜索boosting">搜索boosting<a class="headerlink" href="#搜索boosting" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>页面可以通过前言属性在搜索中提升搜索排名，这将使它们的排名更高, 如：</p>
+<div class="highlight"><pre><span></span><code>---
+search:
+  boost: 2 # 参数为一个比例, 1为标准值, 低于1则表示排名下降，大于1反之
+---
+</code></pre></div>
+<h3 id="搜索排除">搜索排除<a class="headerlink" href="#搜索排除" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>可以使用前言属性从搜索中排除页面，将其从索引中删除</p>
+<div class="highlight"><pre><span></span><code>---
+search:
+  exclude: true
+---
+</code></pre></div>
+<h4 id="排除部分">排除部分<a class="headerlink" href="#排除部分" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<p>mkdocs.yml:
+markdown_extensions : - attr_list
+XX.md:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>## XXXX  { data-search-exclude }
+</code></pre></div>
+search_index.json:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>{
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  ...
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>  &quot;docs&quot;: [
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    {
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>      &quot;location&quot;:&quot;page/&quot;,
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>      &quot;text&quot;:&quot;&quot;,
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>      &quot;title&quot;:&quot;Document title&quot;
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    },
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    {
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>      &quot;location&quot;:&quot;page/#section-1&quot;,
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>      &quot;text&quot;:&quot;&lt;p&gt;The content of this section is included&lt;/p&gt;&quot;,
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>      &quot;title&quot;:&quot;Section 1&quot;
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>    }
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>  ]
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>}
+</code></pre></div>
+<h4 id="排除块">排除块<a class="headerlink" href="#排除块" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<p>在 Markdown 内联或块级元素后添加杂注从搜索中排除页面的特定部分
+mkdocs.yml:</p>
+<div class="highlight"><pre><span></span><code>markdown_extensions : - attr_list
+</code></pre></div>
+<p>XXX.md:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a># Document title
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>... ...
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>{ data-search-exclude }
+</code></pre></div>
+search_index.json:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>{
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>  ...
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  &quot;docs&quot;: [
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    {
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>      &quot;location&quot;:&quot;page/&quot;,
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>      &quot;text&quot;:&quot;&lt;p&gt;The content of this block is included&lt;/p&gt;&quot;,
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>      &quot;title&quot;:&quot;Document title&quot;
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    }
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>  ]
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>}
+</code></pre></div>
+<h1 id="八站点分析略">八.站点分析(略)<a class="headerlink" href="#八站点分析略" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h1 id="九社交卡略">九.社交卡(略)<a class="headerlink" href="#九社交卡略" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h1 id="十博客">十.博客<a class="headerlink" href="#十博客" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h1 id="十一标签">十一.标签<a class="headerlink" href="#十一标签" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_5">1.配置<a class="headerlink" href="#1配置_5" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="内置标签插件">内置标签插件<a class="headerlink" href="#内置标签插件" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<ul>
+<li>启用标签插件
+    plugins: - tags</li>
+<li>指定在构建项目时是否启用插件。如果要加快本地构建速度，可以使用<a href="https://www.mkdocs.org/user-guide/configuration/#environment-variables">环境变量</a>
+    plugins.-tags.enabled : !ENV [CI, false]</li>
+<li>指定应使用哪个页面来呈现<a href="https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#adding-a-tags-index">标记索引</a>
+// 如果指定此选项，则标签变为可点击，指向标签索引中的相应部分
+    plugins.-tags.tags_file : tags.md
+(保存标记索引的页面可以链接到nav节中的任何位置。但请注意，此选项不是必需的 - 仅在您想要标签索引页时才使用它)</li>
+<li>指定其他页面，即呈现标记索引的子集，以便为特定部分提供作用域标记索引
+    plugins.-tags.tags_extra_files.'compatibility.md' : - compat
+    plugins.-tags.tags_extra_files.'web.md:':
+        - html
+        - js
+        - css</li>
+</ul>
+<h1 id="十二版本控制">十二.版本控制<a class="headerlink" href="#十二版本控制" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h1 id="十三标头标题栏">十三.标头(标题栏)<a class="headerlink" href="#十三标头标题栏" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="配置_2">配置<a class="headerlink" href="#配置_2" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="自动隐藏">自动隐藏<a class="headerlink" href="#自动隐藏" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>启用自动隐藏后，当用户滚动超过特定阈值时，标头会自动隐藏，从而为内容留出更多空间</p>
+<div class="highlight"><pre><span></span><code>theme.features : - header.autohide
+</code></pre></div>
+<h3 id="公告栏">公告栏<a class="headerlink" href="#公告栏" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p><a href="/main/开始#重写模板块">参考:重写模板块</a>
+如：</p>
+<div class="highlight"><span class="filename">overrides/main.html</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>{% extends &quot;base.html&quot; %}
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>{% block announce %}
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="cm">&lt;!-- Add announcement here, including arbitrary HTML --&gt;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>公告内容....<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>{% endblock %}
+</code></pre></div>
+<h1 id="十四页脚">十四.页脚<a class="headerlink" href="#十四页脚" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1配置_6">1.配置<a class="headerlink" href="#1配置_6" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="导航">导航<a class="headerlink" href="#导航" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>页脚可以包含指向当前页面的上一页和下一页的链接</p>
+<div class="highlight"><pre><span></span><code>theme.features : - navigation.footer
+</code></pre></div>
+<h3 id="社交链接">社交链接<a class="headerlink" href="#社交链接" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>社交链接作为项目文档页脚的一部分呈现在版权声明旁边</p>
+<div class="highlight"><pre><span></span><code>extra.social:
+    - icon: fontawesome/brands/XXX  # 图标
+      link: 链接url地址
+      name: 标识名
+</code></pre></div>
+<p>// 可以有多项以上形式的配置
+// XXX -&gt; docker | facebook | github | instagram | linkedin | medium | pied-piper-alt | product-hunt | slack | twitter</p>
+<h3 id="版权声明">版权声明<a class="headerlink" href="#版权声明" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code>copyright: Copyright &amp;copy; 2016 - 2020 Martin Donath
+</code></pre></div>
+<h3 id="生成通知">生成通知<a class="headerlink" href="#生成通知" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>添加如下代码后，可以直观的看到页脚中的"Made with Material for MkDocs "会被移除</p>
+<div class="highlight"><pre><span></span><code>extra.generator : false
+</code></pre></div>
+<h2 id="2用法_2">2.用法<a class="headerlink" href="#2用法_2" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="隐藏部分页脚">隐藏部分页脚<a class="headerlink" href="#隐藏部分页脚" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>隐藏部分页面的页脚:</p>
+<div class="highlight"><pre><span></span><code>---
+hide:
+  - footer
+---
+</code></pre></div>
+<h2 id="3定制_1">3.定制<a class="headerlink" href="#3定制_1" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="自定义版权略">自定义版权(略)<a class="headerlink" href="#自定义版权略" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<h1 id="十五git存储库">十五.git存储库<a class="headerlink" href="#十五git存储库" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="配置_3">配置<a class="headerlink" href="#配置_3" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="存储库">存储库<a class="headerlink" href="#存储库" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<h4 id="存储库名称">存储库名称<a class="headerlink" href="#存储库名称" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<div class="highlight"><pre><span></span><code>repo_name : 存储库名
+repo_url : 存储库url
+</code></pre></div>
+<h4 id="存储库图标">存储库图标<a class="headerlink" href="#存储库图标" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<div class="highlight"><pre><span></span><code>theme.icon.repo : fontawesome/brands/XXX
+</code></pre></div>
+<p>// XXX -&gt; git | git-alt | github | github-alt | gitlab | gitkraken | bitbucket | trash</p>
+<h4 id="代码操作">代码操作<a class="headerlink" href="#代码操作" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<p>两种操作：编辑，预览</p>
+<div class="highlight"><pre><span></span><code>theme.features : - content.action.edit
+theme.features : - content.action.view
+</code></pre></div>
+<p>编辑和查看按钮的图标:</p>
+<div class="highlight"><pre><span></span><code>theme.icon:
+    edit: material/pencil 
+    view: material/eye
+</code></pre></div>
+<h3 id="修订">修订<a class="headerlink" href="#修订" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>以下插件与 MkDocs 材料完全集成，允许显示上次更新和创建文档的日期，以及指向所有相关贡献者或作者的链接</p>
+<h4 id="文档日期">文档日期<a class="headerlink" href="#文档日期" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<p>git-revision-date-local插件增加了对在每个页面底部添加上次更新日期和创建文档的支持</p>
+<p>cmd :</p>
+<div class="highlight"><pre><span></span><code>pip install mkdocs-git-revision-date-localized-plugin
+</code></pre></div>
+<p>mkdocs.yml :</p>
+<div class="highlight"><pre><span></span><code>plugins.-git-revision-date-localized:
+    enable_creation_date: true
+</code></pre></div>
+<p>指定在构建项目时是否启用插件。如果你想关闭插件，例如对于本地构建，请使用环境变量：true</p>
+<div class="highlight"><pre><span></span><code>plugins.-git-revision-date-localized:
+    enabled: !ENV [CI, false]
+</code></pre></div>
+<p>指定要显示的日期的格式</p>
+<div class="highlight"><pre><span></span><code>plugins.-git-revision-date-localized:
+    type: date | datetime | iso_dateiso | datetime | timeago
+</code></pre></div>
+<p>允许在页面底部的上次更新日期旁边显示与页面关联的文件的创建日期</p>
+<div class="highlight"><pre><span></span><code>plugins.-git-revision-date-localized:
+    enable_creation_date: true
+</code></pre></div>
+<p>启用回退到执行时间。在 git 存储库外部执行构建时，可以用作回退</p>
+<div class="highlight"><pre><span></span><code>plugins.-git-revision-date-localized:
+    fallback_to_build_date: true
+</code></pre></div>
+<h4 id="文档参与者">文档参与者<a class="headerlink" href="#文档参与者" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<p>git-committers2 插件渲染所有贡献者的 GitHub 头像，链接到每个页面底部的 GitHub 个人资料
+cmd :</p>
+<div class="highlight"><pre><span></span><code>pip install mkdocs-git-committers-plugin-2
+</code></pre></div>
+<p>mkdocs.yml :</p>
+<div class="highlight"><pre><span></span><code>plugins.-git-committers:
+    repository: squidfunk/mkdocs-material
+    branch: main
+</code></pre></div>
+<p>指定在构建项目时是否启用插件</p>
+<div class="highlight"><pre><span></span><code>plugins.-git-committers:
+    enabled: !ENV [CI, false]
+</code></pre></div>
+<p>设置为包含文档的存储库的 sloc:</p>
+<div class="highlight"><pre><span></span><code>plugins.-git-committers:
+    repository: 用户名/仓库地址
+</code></pre></div>
+<p>设置为要从中检索参与者的存储库的分支:</p>
+<div class="highlight"><pre><span></span><code>plugins.-git-committers:
+    branch: main
+</code></pre></div>
+<h4 id="文档作者">文档作者<a class="headerlink" href="#文档作者" title="Anchor link to this section for reference">👈👈👈</a></h4>
+<p>git-authors 插件从 git 中提取文档的作者，以将它们显示在每个页面的底部
+cmd :</p>
+<div class="highlight"><pre><span></span><code>pip install mkdocs-git-authors-plugin
+</code></pre></div>
+<p>mydocs.yml :</p>
+<div class="highlight"><pre><span></span><code>plugins : - git-authors
+</code></pre></div>
+<h1 id="十六注释系统略">十六.注释系统（略）<a class="headerlink" href="#十六注释系统略" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h1 id="十七扩展python-markdown">十七.扩展——python markdown<a class="headerlink" href="#十七扩展python-markdown" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="1支持的扩展">1.支持的扩展<a class="headerlink" href="#1支持的扩展" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="缩写">缩写<a class="headerlink" href="#缩写" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code>markdown_extensions : - abbr
+</code></pre></div>
+<p>// 参考 : <a href="https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-abbreviations">添加缩写</a>, <a href="https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-a-glossary">添加词汇表</a></p>
+<h3 id="告诫">告诫<a class="headerlink" href="#告诫" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>通常称为标注</p>
+<div class="highlight"><pre><span></span><code>markdown_extensions : - admonition
+</code></pre></div>
+<p>// 参考 : <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/#usage">添加告诫</a>, <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/#changing-the-title">更改标题</a>, <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/#removing-the-title">删除标题</a>, <a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types">支持的类型</a></p>
+<h3 id="属性列表">属性列表<a class="headerlink" href="#属性列表" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>属性列表扩展允许使用特殊语法将HTML属性和CSS类添加到几乎每个Markdown内联和块级元素中</p>
+<div class="highlight"><pre><span></span><code>markdown_extensions : - attr_list
+</code></pre></div>
+<p>// 参考 : <a href="https://squidfunk.github.io/mkdocs-material/reference/annotations/#usage">使用批注</a>, <a href="https://squidfunk.github.io/mkdocs-material/reference/grids/#usage">使用网格</a>, <a href="https://squidfunk.github.io/mkdocs-material/reference/buttons/#adding-buttons">添加按钮</a>, <a href="添加工具提示">添加工具提示</a>, <a href="使用带有颜色的图标">使用带有颜色的图标</a>, <a href="https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#with-animations">将图标与动画结合使用</a>, <a href="https://squidfunk.github.io/mkdocs-material/reference/images/#image-alignment">图像对齐</a>, <a href="https://squidfunk.github.io/mkdocs-material/reference/images/#image-lazy-loading">图像延迟加载</a></p>
+<h3 id="定义列表">定义列表<a class="headerlink" href="#定义列表" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<div class="highlight"><pre><span></span><code>markdown_extensions : - def_list
+</code></pre></div>
+<p>// 参考 : <a href="https://squidfunk.github.io/mkdocs-material/reference/lists/#using-definition-lists">使用定义列表</a></p>
+<h3 id="脚注">脚注<a class="headerlink" href="#脚注" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>脚注扩展允许定义内联脚注，然后将其呈现在文档的所有 Markdown 内容下方</p>
+<div class="highlight"><pre><span></span><code>markdown_extensions : - footnotes
+</code></pre></div>
+<p>// 参考 : <a href="https://squidfunk.github.io/mkdocs-material/reference/footnotes/#adding-footnote-references">添加脚注引用</a>, <a href="https://squidfunk.github.io/mkdocs-material/reference/footnotes/#adding-footnote-content">添加脚注内容</a></p>
+<h3 id="markdown-in-html">markdown in HTML<a class="headerlink" href="#markdown-in-html" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>HTML 中的 Markdown 扩展允许在 HTML 中编写 Markdown，这对于用自定义元素包装 Markdown 内容很有用</p>
+<div class="highlight"><pre><span></span><code>markdown_extensions : - md_in_html
+</code></pre></div>
+<p>// 默认情况下，Markdown 会忽略原始 HTML 块级元素中的任何内容。启用扩展后，可以通过在开始标记上包含属性来将原始 HTML 块级元素的内容解析为 Markdown。该属性将从输出中删除，而所有其他属性将保留。md_in_htmlmarkdownmarkdown
+// 参考 : <a href="https://squidfunk.github.io/mkdocs-material/reference/annotations/#usage">使用批注</a>, <a href="https://squidfunk.github.io/mkdocs-material/reference/grids/#usage">使用网格</a>, <a href="https://squidfunk.github.io/mkdocs-material/reference/images/#image-captions">图片说明</a></p>
+<h3 id="目录_1">目录<a class="headerlink" href="#目录_1" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>目录扩展会自动从文档生成目录，MkDocs-material将作为结果页面的一部分呈现该目录。通过以下方式启用它</p>
+<div class="highlight"><pre><span></span><code>markdown_extensions.-toc.permalink : true
+</code></pre></div>
+<p>此选项在右侧导航侧边栏中设置目录的标题</p>
+<div class="highlight"><pre><span></span><code>markdown_extensions.-toc.title : 右侧边栏标题
+</code></pre></div>
+<p>锚链接</p>
+<div class="highlight"><pre><span></span><code>markdown_extensions.-toc.permalink : true | false | 锚链接符号(¶, ⚓︎, ...)
+markdown_extensions.-toc.permalink_title : 锚链接标题
+</code></pre></div>
+<p>允许自定义辅助信息域功能</p>
+<div class="highlight"><pre><span></span><code>markdown_extensions.-toc.slugify: !!python/object/apply:pymdownx.slugs.slugify
+    kwds:
+      case: lower
+</code></pre></div>
+<p>定义要包含在内容列表中的级别范围,这对于具有深度结构化标题的项目文档可能很有用，可以减少目录的长度或完全删除目录, 可以减少目录的长度或完全删除目录：6</p>
+<div class="highlight"><pre><span></span><code>markdown_extensions.-toc.toc_depth : 整数x    # 隐藏级别 大于x 的标题
+</code></pre></div>
+<h3 id="表">表<a class="headerlink" href="#表" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>表扩展添加了使用简单语法在 Markdown 中创建表的功能</p>
+<div class="highlight"><pre><span></span><code>markdown_extensions : - tables
+</code></pre></div>
+<p>// 参考 : <a href="https://squidfunk.github.io/mkdocs-material/reference/data-tables/#usage">使用数据表</a>, <a href="https://squidfunk.github.io/mkdocs-material/reference/data-tables/#column-alignment">列对齐</a></p>
+<h2 id="2被取代的扩展略">2.被取代的扩展(略)<a class="headerlink" href="#2被取代的扩展略" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h1 id="十八扩展python-markdown-extensions">十八.扩展——python markdown extensions<a class="headerlink" href="#十八扩展python-markdown-extensions" title="Anchor link to this section for reference">👈👈👈</a></h1>
+<h2 id="支持的扩展">支持的扩展<a class="headerlink" href="#支持的扩展" title="Anchor link to this section for reference">👈👈👈</a></h2>
+<h3 id="算术">算术<a class="headerlink" href="#算术" title="Anchor link to this section for reference">👈👈👈</a></h3>
+<p>Arithmatex扩展允许渲染块和内联块方程，并与MathJax1无缝集成 - 一个用于数学排版的库</p>
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+    - pymdownx.arithmatex:
+          generic: true
+</code></pre></div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="最后更新">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 14, 2024</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="创建日期">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 14, 2024</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" hidden>
+        
+          
+          <a href="../%E5%BC%80%E5%A7%8B/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 开始">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                开始
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" class="md-footer__link md-footer__link--next" aria-label="下一页: 配置文件">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                配置文件
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 - 2023 travis
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="http://www.baidu.com" target="_blank" rel="noopener" title="指针" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="http://www.baidu.com" target="_blank" rel="noopener" title="www.baidu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="http://www.baidu.com" target="_blank" rel="noopener" title="www.baidu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="http://www.baidu.com" target="_blank" rel="noopener" title="www.baidu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="http://www.baidu.com" target="_blank" rel="noopener" title="www.baidu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="http://www.baidu.com" target="_blank" rel="noopener" title="www.baidu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="http://www.baidu.com" target="_blank" rel="noopener" title="www.baidu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M244 246c-3.2-2-6.3-2.9-10.1-2.9-6.6 0-12.6 3.2-19.3 3.7l1.7 4.9zm135.9 197.9c-19 0-64.1 9.5-79.9 19.8l6.9 45.1c35.7 6.1 70.1 3.6 106-9.8-4.8-10-23.5-55.1-33-55.1zM340.8 177c6.6 2.8 11.5 9.2 22.7 22.1 2-1.4 7.5-5.2 7.5-8.6 0-4.9-11.8-13.2-13.2-23 11.2-5.7 25.2-6 37.6-8.9 68.1-16.4 116.3-52.9 146.8-116.7C548.3 29.3 554 16.1 554.6 2l-2 2.6c-28.4 50-33 63.2-81.3 100-31.9 24.4-69.2 40.2-106.6 54.6l-6.3-.3v-21.8c-19.6 1.6-19.7-14.6-31.6-23-18.7 20.6-31.6 40.8-58.9 51.1-12.7 4.8-19.6 10-25.9 21.8 34.9-16.4 91.2-13.5 98.8-10zM555.5 0l-.6 1.1-.3.9.6-.6zm-59.2 382.1c-33.9-56.9-75.3-118.4-150-115.5l-.3-6c-1.1-13.5 32.8 3.2 35.1-31l-14.4 7.2c-19.8-45.7-8.6-54.3-65.5-54.3-14.7 0-26.7 1.7-41.4 4.6 2.9 18.6 2.2 36.7-10.9 50.3l19.5 5.5c-1.7 3.2-2.9 6.3-2.9 9.8 0 21 42.8 2.9 42.8 33.6 0 18.4-36.8 60.1-54.9 60.1-8 0-53.7-50-53.4-60.1l.3-4.6 52.3-11.5c13-2.6 12.3-22.7-2.9-22.7-3.7 0-43.1 9.2-49.4 10.6-2-5.2-7.5-14.1-13.8-14.1-3.2 0-6.3 3.2-9.5 4-9.2 2.6-31 2.9-21.5 20.1L15.9 298.5c-5.5 1.1-8.9 6.3-8.9 11.8 0 6 5.5 10.9 11.5 10.9 8 0 131.3-28.4 147.4-32.2 2.6 3.2 4.6 6.3 7.8 8.6 20.1 14.4 59.8 85.9 76.4 85.9 24.1 0 58-22.4 71.3-41.9 3.2-4.3 6.9-7.5 12.4-6.9.6 13.8-31.6 34.2-33 43.7-1.4 10.2-1 35.2-.3 41.1 26.7 8.1 52-3.6 77.9-2.9 4.3-21 10.6-41.9 9.8-63.5l-.3-9.5c-1.4-34.2-10.9-38.5-34.8-58.6-1.1-1.1-2.6-2.6-3.7-4 2.2-1.4 1.1-1 4.6-1.7 88.5 0 56.3 183.6 111.5 229.9 33.1-15 72.5-27.9 103.5-47.2-29-25.6-52.6-45.7-72.7-79.9zm-196.2 46.1v27.2l11.8-3.4-2.9-23.8zm-68.7-150.4 24.1 61.2 21-13.8-31.3-50.9zm84.4 154.9 2 12.4c9-1.5 58.4-6.6 58.4-14.1 0-1.4-.6-3.2-.9-4.6-26.8 0-36.9 3.8-59.5 6.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="http://www.baidu.com" target="_blank" rel="noopener" title="www.baidu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M326.3 218.8c0 20.5-16.7 37.2-37.2 37.2h-70.3v-74.4h70.3c20.5 0 37.2 16.7 37.2 37.2zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-128.1-37.2c0-47.9-38.9-86.8-86.8-86.8H169.2v248h49.6v-74.4h70.3c47.9 0 86.8-38.9 86.8-86.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="http://www.baidu.com" target="_blank" rel="noopener" title="www.baidu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="http://www.baidu.com" target="_blank" rel="noopener" title="www.baidu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:1506218507@qq.com" target="_blank" rel="noopener" title="给梁雄大人打邮箱" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+    
+  
+
+
+
+  
+
+
+<h4>None</h4>
+<p>我们还使用cookie来识别您的重复访问和偏好 至于衡量我们文档的有效性和用户是否 找出他们在寻找什么。只要你同意，你就是在帮我们 使我们的文档更好。</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">同意</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">管理设定</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide", "navigation.footer", "content.action.edit", "content.action.view", "content.code.copy", "content.code.annotate", "content.tooltips"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
